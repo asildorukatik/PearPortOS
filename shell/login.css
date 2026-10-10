@@ -6,12 +6,14 @@
  backdrop-filter:none;-webkit-backdrop-filter:none;font-family:var(--font-ui),-apple-system,Arial,sans-serif;
 }
 .pear-login *{box-sizing:border-box}
-.pear-login .login-backdrop{position:absolute;inset:-4px;background-image:var(--catalina-day);background-size:cover;background-position:center;filter:blur(3.5px);transform:scale(1.025);transition:filter .45s,transform .55s;z-index:-2}
-.pear-login .login-backdrop::after{content:"";position:absolute;inset:0;background-image:var(--catalina-night);background-size:cover;background-position:center;opacity:0;transition:opacity .52s ease}
-.pear-login[data-scene="password"] .login-backdrop{filter:blur(8px) brightness(.9);transform:scale(1.065)}
-.pear-login[data-scene="password"] .login-backdrop::after{opacity:1}
-.pear-login[data-scene="sleep"] .login-backdrop,.pear-login[data-scene="shutdown"] .login-backdrop{filter:blur(10px) brightness(.35);transform:scale(1.08)}
-.pear-login[data-scene="sleep"] .login-backdrop::after,.pear-login[data-scene="shutdown"] .login-backdrop::after{opacity:1}
+/* Keep the user-selected wallpaper while moving between account selection and password entry. */
+.pear-login .login-backdrop{position:absolute;inset:-5px;background-image:var(--catalina-night);background-size:cover;background-position:center;filter:blur(3px);transform:scale(1.022);transition:filter .45s ease,transform .55s ease;z-index:-2}
+:root[data-wallpaper-phase="day"] .pear-login .login-backdrop{background-image:var(--catalina-day)}
+:root[data-wallpaper-phase="dusk"] .pear-login .login-backdrop{background-image:var(--catalina-dusk)}
+:root[data-wallpaper-phase="night"] .pear-login .login-backdrop{background-image:var(--catalina-night)}
+:root[data-wallpaper-custom="on"] .pear-login .login-backdrop{background-image:var(--custom-wallpaper-url)}
+.pear-login[data-scene="password"] .login-backdrop{filter:blur(3px);transform:scale(1.022)}
+.pear-login[data-scene="sleep"] .login-backdrop,.pear-login[data-scene="shutdown"] .login-backdrop{filter:blur(9px) brightness(.35);transform:scale(1.04)}
 .pear-login .login-tint{position:absolute;inset:0;z-index:-1;background:linear-gradient(to bottom,rgba(3,13,28,.21),rgba(6,15,29,.08) 30%,rgba(2,9,17,.19) 70%,rgba(1,7,14,.37));pointer-events:none}
 .pear-login .login-top{position:absolute;top:16px;right:26px;display:flex;flex-direction:column;align-items:end;gap:2px;text-shadow:0 1px 5px #0006;letter-spacing:-.014em}
 .pear-login .login-date{font-size:12px;opacity:.78}.pear-login .login-clock{font-size:15px;font-weight:500}
@@ -24,13 +26,13 @@
 .pear-login .login-user:focus-visible{outline:0}.pear-login .login-user-avatar img,.pear-login .login-active-avatar img{height:100%;width:100%;object-fit:cover;user-select:none}
 .pear-login .login-instruction{font-size:12px;color:#fff9;margin-top:35px;letter-spacing:.01em;text-shadow:0 1px 4px #0008}
 .pear-login .login-auth{width:min(300px,90vw);display:flex;flex-direction:column;align-items:center;position:relative;gap:9px;animation:login-auth-enter .42s cubic-bezier(.2,.7,.2,1) both}
-.pear-login .login-active-avatar{width:98px;height:98px;margin-bottom:5px}
+.pear-login .login-active-avatar{width:102px;height:102px;margin-bottom:8px}
 .pear-login .login-auth h1{font:500 17px var(--font-ui);text-shadow:0 2px 5px #000a;margin:0 0 7px}
 .pear-login .login-back{position:absolute;top:-55px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:5px;border:0;background:transparent;color:#fffc;font:12px var(--font-ui);cursor:pointer;white-space:nowrap;opacity:.85}
 .pear-login .login-back:hover{opacity:1;text-decoration:underline}.pear-login .login-back:first-letter{font-size:19px}
-.pear-login .login-password-wrap{height:34px;width:230px;display:flex;align-items:center;background:rgba(230,237,249,.29);border:1px solid #ffffff90;border-radius:15px;box-shadow:0 2px 7px #0005,inset 0 1px #ffffff39;overflow:hidden}
+.pear-login .login-password-row{display:flex;align-items:center;gap:7px}.pear-login .login-password-wrap{height:32px;width:217px;display:flex;align-items:center;background:rgba(210,218,231,.38);border:1px solid #ffffff65;border-radius:5px;box-shadow:0 1px 5px #0005,inset 0 1px #ffffff25;overflow:hidden}
 .pear-login .login-password{height:100%;width:100%;min-width:0;flex:1;padding:0 11px;background:transparent;border:0;outline:none;color:#fff;font:13px var(--font-ui);letter-spacing:1.5px}
-.pear-login .login-password::placeholder{color:#fff9;letter-spacing:0}.pear-login .login-password-wrap:focus-within{box-shadow:0 2px 7px #0005,0 0 0 2px #c1e3ff77}
+.pear-login .login-password::placeholder{color:#fffb;letter-spacing:0}.pear-login .login-password-wrap:focus-within{box-shadow:0 2px 7px #0005,0 0 0 2px #c1e3ff77}
 .pear-login .login-field-arrow{height:21px;width:21px;flex:none;margin-right:5px;border-radius:50%;border:1px solid #fff8;display:grid;place-items:center;font-size:14px;color:#fffc;opacity:.9;pointer-events:none}
 .pear-login .login-feedback{font-size:11px;color:#fffe;text-shadow:0 1px 4px #0009;margin:1px 0;min-height:15px}
 .pear-login.login-invalid .login-password-wrap{animation:login-shake .44s ease both}.pear-login.login-success .login-auth{animation:login-success .35s ease forwards}
@@ -56,8 +58,8 @@
 .pear-login .setup-screen{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:14px;background:#e4e4e4;cursor:pointer}
 .pear-login .setup-card{position:relative;display:flex;flex-direction:column;align-items:center;width:min(446px,calc(100vw - 32px));height:min(388px,calc(100vh - 36px));min-height:300px;justify-content:center;background:#fff;border:1px solid #d0d0d0;border-radius:8px;box-shadow:0 14px 15px #0004,0 2px 6px #0001;color:#080808;cursor:default;animation:setup-pop .28s ease-out both}
 .pear-login .setup-card:focus{outline:none}
-.pear-login .setup-logo{height:157px;width:127px;border-radius:50%;padding:7px;background:linear-gradient(#fbfbff,#d8d9e2);box-shadow:0 2px 3px #0005,0 0 0 1px #acafbb,inset 0 1px #fff;overflow:hidden;margin-bottom:14px}
-.pear-login .setup-logo img{height:100%;width:100%;object-fit:cover;object-position:50% 50%;border-radius:50%;}
+.pear-login .setup-logo{height:132px;width:132px;border-radius:50%;padding:7px;background:linear-gradient(#fbfbff,#d8d9e2);box-shadow:0 2px 3px #0005,0 0 0 1px #acafbb,inset 0 1px #fff;overflow:hidden;margin:0 auto 14px;display:flex;align-items:center;justify-content:center;aspect-ratio:1/1}
+.pear-login .setup-logo img{height:100%;width:100%;object-fit:contain;object-position:50% 50%;border-radius:50%;display:block;background:#000;}
 .pear-login .setup-brand{margin:0 0 48px;font-size:31px;font-weight:400;letter-spacing:-.035em;white-space:nowrap;color:#050505}
 .pear-login .setup-brand strong,.pear-login .setup-small-brand strong{font-weight:730}
 .pear-login .setup-small-brand{position:absolute;top:19px;left:18px;font-size:17px;letter-spacing:-.035em;color:#111;white-space:nowrap}
@@ -72,5 +74,10 @@
 .pear-login .setup-error{position:absolute;bottom:53px;left:18px;right:18px;text-align:center;font-size:12px;color:#b32d2d;pointer-events:none}
 .pear-login .setup-card:has(.setup-form) .setup-error{bottom:52px}
 @keyframes setup-pop{from{opacity:0;transform:translateY(9px) scale(.985)}to{opacity:1;transform:none}}
-@media(max-width:490px){.pear-login .setup-card{height:min(380px,calc(100vh - 30px))}.pear-login .setup-brand{font-size:25px}.pear-login .setup-form h2{font-size:19px}.pear-login .setup-entry{height:67px;font-size:18px}.pear-login .setup-logo{height:140px;width:116px}}
+@media(max-width:490px){.pear-login .setup-card{height:min(380px,calc(100vh - 30px))}.pear-login .setup-brand{font-size:25px}.pear-login .setup-form h2{font-size:19px}.pear-login .setup-entry{height:67px;font-size:18px}.pear-login .setup-logo{height:116px;width:116px}}
 @media(prefers-reduced-motion:reduce){.pear-login .setup-card{animation:none}}
+
+.pear-login .login-password-help{width:23px;height:23px;flex:0 0 23px;padding:0;border:1px solid #fff9;border-radius:4px;background:rgba(210,220,235,.55);color:#fff;font:700 15px var(--font-ui);box-shadow:0 1px 4px #0005;cursor:pointer}
+.pear-login .login-password-help:hover,.pear-login .login-password-help:focus-visible{background:rgba(230,239,255,.75);outline:2px solid #b8dcff90;outline-offset:1px}
+.pear-login .login-password-row{animation:login-password-appear .30s ease .08s both}
+@keyframes login-password-appear{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
