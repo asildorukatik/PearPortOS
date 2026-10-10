@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+ <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
+ <meta name="theme-color" content="#19263f"/>
+ <title>PearPortOS — Catalina debug twin</title>
+ <link rel="stylesheet" href="core/tokens.css"/>
+ <link rel="stylesheet" href="core/typography.css"/>
+ <link rel="stylesheet" href="shell/shell.css"/>
+ <link rel="stylesheet" href="core/ui/widgets.css"/>
+ <link rel="stylesheet" href="apps/preferences/preferences.css"/>
+ <link rel="stylesheet" href="apps/pearder/pearder.css"/>
+ <link rel="stylesheet" href="apps/terminal/terminal.css"/>
+ <link rel="stylesheet" href="shell/phase5.css"/>
+ <link rel="stylesheet" href="shell/catalina-fidelity.css"/>
+ <link rel="stylesheet" href="shell/accuracy-pass-a.css"/>
+ <link rel="stylesheet" href="shell/user-assets-v0.5.3.css"/>
+ <link rel="stylesheet" href="shell/catalina-widgets-v0.5.4.css"/>
+ <link rel="stylesheet" href="apps/calendar/calendar.css"/>
+ <link rel="stylesheet" href="shell/login.css"/>
+</head>
+<body>
+ <div id="screen" role="application" aria-label="PearPortOS desktop">
+  <div class="wallpaper" id="wallpaper"></div>
+  <main id="desktop" aria-label="Desktop"></main>
+  <div id="window-layer"></div>
+  <nav id="dock" aria-label="Dock"></nav>
+  <header id="menu-bar" class="menu-bar"></header>
+  <div id="popups"></div>
+  <div id="compare-layer" aria-hidden="true"><img id="compare-image" alt="Reference image for visual alignment"/></div>
+  <div id="debug-grid" aria-hidden="true"></div>
+  <div id="debug-hover" aria-hidden="true"></div>
+  <aside id="debug-panel" aria-label="PearPortOS debug inspector"></aside>
+  <div id="toast" role="status" aria-live="polite"></div>
+ </div>
+ <script src="core/EventBus.js"></script>
+ <script src="assets/icons/user-icons-manifest.js"></script>
+ <script src="assets/icons/elementary-manifest.js"></script>
+ <script src="shell/elementary-sources.js"></script>
+ <script src="shell/IconTheme.js"></script>
+ <script src="core/squircle.js"></script>
+ <script src="core/ThemeManager.js"></script>
+ <script src="core/AppRegistry.js"></script>
+ <script src="core/VirtualFS.js"></script>
+ <script src="core/WindowManager.js"></script>
+ <script src="core/ui/widgets.js"></script>
+ <script src="apps/preferences/Preferences.js"></script>
+ <script src="apps/pearder/Pearder.js"></script>
+ <script src="apps/terminal/Terminal.js"></script>
+ <script src="shell/MenuBar.js"></script>
+ <script src="shell/Desktop.js"></script>
+ <script src="shell/DesktopWidgets.js"></script>
+ <script src="apps/calendar/Calendar.js"></script>
+ <script src="shell/Dock.js"></script>
+ <script src="shell/CompareMode.js"></script>
+ <script src="shell/DebugPanel.js"></script>
+ <script src="shell/LoginSession.js"></script>
+ <script src="shell/Phase5.js"></script>
+ <script src="shell/launchpad-motion.js"></script>
+ <script src="main.js"></script>
+</body></html>

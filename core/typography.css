@@ -1,0 +1,21 @@
+@font-face {font-family:InterLocal;src:url('../assets/fonts/Inter-Regular.woff2') format('woff2');font-style:normal;font-weight:400;font-display:swap}
+@font-face {font-family:InterLocal;src:url('../assets/fonts/Inter-Medium.woff2') format('woff2');font-style:normal;font-weight:500;font-display:swap}
+@font-face {font-family:InterLocal;src:url('../assets/fonts/Inter-SemiBold.woff2') format('woff2');font-style:normal;font-weight:600;font-display:swap}
+@font-face {font-family:InterLocal;src:url('../assets/fonts/Inter-Bold.woff2') format('woff2');font-style:normal;font-weight:700;font-display:swap}
+@font-face {font-family:DejaVuMonoLocal;src:url('../assets/fonts/DejaVuSansMono.woff2') format('woff2');font-display:swap}
+:root {
+ --font-ui:-apple-system,BlinkMacSystemFont,'SF Pro Text',InterLocal,'Helvetica Neue',Arial,sans-serif;
+ --font-system:-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif;
+ --font-mono:Menlo,'SF Mono',DejaVuMonoLocal,Consolas,monospace;
+ --fs-menu:14px; /* ASSUMED – verify with screenshot */
+ --fs-body:13px; /* ASSUMED – verify with screenshot */
+ --fs-small:11px; /* ASSUMED – verify with screenshot */
+ --fs-title:17px; /* ASSUMED – verify with screenshot */
+ --tracking-11:.005em; --tracking-13:-.006em; --tracking-15:-.016em;
+ --tracking-17:-.024em; --tracking-20:-.01em;
+}
+:root[data-debug-font="system"] {--font-ui:var(--font-system)}
+html,body,button,input,select,textarea{font-family:var(--font-ui);-webkit-font-smoothing:antialiased;font-feature-settings:'cv11','ss03'}
+body{font-size:var(--fs-body);letter-spacing:var(--tracking-13)}
+.menu-bar{font-size:var(--fs-menu);letter-spacing:var(--tracking-13)}
+.window-title{font-size:var(--window-title-size);letter-spacing:var(--tracking-13)}

@@ -1,0 +1,35 @@
+/* Original macOS Catalina-era control primitives. No iOS toggles. */
+.pp-button,.pp-select,.pp-segment-item,.pp-stepper button{height:var(--ui-button-height);border-radius:var(--ui-button-radius);border:1px solid var(--ui-control-border);background:linear-gradient(var(--ui-button-top),var(--ui-button-bottom));color:var(--text-primary);padding:0 var(--ui-push-padding-x);white-space:nowrap;font-size:var(--fs-body);line-height:1;font-weight:400;box-shadow:inset 0 1px #ffffff44,0 1px 1px #0001}
+.pp-button.primary,.pp-segment-item.selected{background:linear-gradient(#2998ff,var(--accent));color:white;border-color:var(--accent)}
+.pp-button:active,.pp-segment-item:active{filter:brightness(.88)}
+.pp-button:disabled,.pp-select:disabled{opacity:var(--ui-disabled-alpha)}
+.pp-button:focus-visible,.pp-select:focus-visible,.pp-field:focus-visible,.pp-search:focus-within,.pp-checkbox:focus-visible,.pp-radio:focus-visible{outline:0;box-shadow:0 0 0 var(--ui-focus-ring-size) rgba(var(--accent-rgb),var(--ui-focus-ring-alpha))}
+.pp-choice{display:inline-flex;align-items:center;gap:7px;font-size:var(--fs-body);line-height:17px;cursor:default}
+.pp-choice input{appearance:none;-webkit-appearance:none;flex:none;width:var(--ui-checkbox-size);height:var(--ui-checkbox-size);margin:0;border:1px solid var(--ui-control-border);background:linear-gradient(var(--ui-button-top),var(--ui-button-bottom));box-shadow:0 1px 1px #0001}
+.pp-choice .pp-checkbox{border-radius:var(--ui-checkbox-radius)}
+.pp-choice .pp-checkbox:checked{background:var(--accent);border-color:var(--accent)}
+.pp-choice .pp-checkbox:checked::after{content:'✓';color:white;font-size:12px;line-height:12px;display:block;text-align:center;font-weight:700}
+.pp-choice .pp-radio{border-radius:50%}
+.pp-choice .pp-radio:checked{background:var(--accent);border-color:var(--accent);box-shadow:inset 0 0 0 3px var(--ui-button-top)}
+.pp-radio-group{display:flex;flex-wrap:wrap;align-items:center;gap:var(--ui-control-gap)}
+.pp-segment{display:inline-flex;white-space:nowrap}
+.pp-segment-item{border-radius:0;border-left:0;min-width:45px}
+.pp-segment-item:first-child{border-radius:var(--ui-segment-radius) 0 0 var(--ui-segment-radius);border-left:1px solid var(--ui-control-border)}
+.pp-segment-item:last-child{border-radius:0 var(--ui-segment-radius) var(--ui-segment-radius) 0}
+.pp-segment-item:only-child{border-radius:var(--ui-segment-radius)}
+.pp-select{min-width:var(--ui-popup-width);padding:0 26px 0 8px;background-color:var(--ui-field-background)}
+.pp-field{height:var(--ui-field-height);min-width:0;border:1px solid var(--ui-control-border);border-radius:var(--ui-button-radius);background:var(--ui-field-background);color:var(--text-primary);padding:0 8px;user-select:text}
+.pp-search{display:flex;align-items:center;gap:6px;padding:0 8px;border:1px solid var(--ui-control-border);border-radius:var(--ui-button-radius);background:var(--ui-field-background);height:var(--ui-field-height);color:var(--text-muted)}
+.pp-search input{border:none;outline:none;min-width:0;background:transparent;color:var(--text-primary);width:100%;user-select:text}
+.pp-slider{appearance:none;width:min(230px,100%);height:var(--ui-slider-track-height);border-radius:5px;background:linear-gradient(90deg,var(--accent),var(--separator));vertical-align:middle;cursor:default;accent-color:var(--accent)}
+.pp-slider::-webkit-slider-thumb{appearance:none;width:var(--ui-slider-knob-size);height:var(--ui-slider-knob-size);border-radius:50%;background:linear-gradient(#fff,#e9e9e9);border:1px solid #8992a0;box-shadow:0 1px 3px #0004}
+.pp-slider::-moz-range-thumb{width:var(--ui-slider-knob-size);height:var(--ui-slider-knob-size);border-radius:50%;background:linear-gradient(#fff,#e9e9e9);border:1px solid #8992a0}
+.pp-stepper{display:inline-flex;align-items:center;gap:8px}.pp-stepper output{width:30px;text-align:right}.pp-stepper>span{display:flex;flex-direction:column}.pp-stepper button{height:11px;padding:0 7px;border-radius:0;font-size:8px}
+.pp-fieldrow{display:flex;gap:var(--ui-control-gap);align-items:flex-start;min-height:var(--prefs-row-height);padding:7px 0}.pp-row-label{width:var(--ui-row-label-width);flex:0 0 var(--ui-row-label-width);text-align:right;padding-top:3px;font-size:var(--fs-body)}.pp-row-field{display:flex;flex-direction:column;align-items:flex-start;gap:7px;flex:1;min-width:0}.pp-row-description{color:var(--text-muted);font-size:var(--fs-small);line-height:1.5;max-width:50ch}.pp-separator{height:1px;background:var(--separator);margin:var(--prefs-divider-gap) 0}
+.pp-progress{appearance:none;height:8px;width:100%;border-radius:8px;overflow:hidden;accent-color:var(--accent)}.pp-progress::-webkit-progress-bar{background:var(--separator);border-radius:8px}.pp-progress::-webkit-progress-value{background:var(--accent);border-radius:8px}
+.pp-spinner{width:18px;height:18px;border:2px solid var(--separator);border-top-color:var(--accent);display:inline-block;border-radius:50%;animation:pp-spin 1s linear infinite}@keyframes pp-spin{to{transform:rotate(360deg)}}
+.pp-table-wrap{border:1px solid var(--separator);max-width:100%;overflow:auto;border-radius:3px}.pp-table{border-collapse:collapse;width:100%;font-size:var(--fs-body);color:var(--text-primary)}.pp-table th{text-align:left;background:var(--surface);font-weight:500;border-bottom:1px solid var(--separator);padding:6px}.pp-table td{padding:7px 6px}.pp-table tbody tr:nth-child(2n){background:rgba(127,127,127,.08)}
+.pp-disclosure summary{cursor:default;font-weight:500}.pp-disclosure>div{padding:10px 0 0 20px;color:var(--text-muted)}
+.pp-tabs{display:flex;gap:18px;border-bottom:1px solid var(--separator)}.pp-tabs button{background:transparent;border:0;border-bottom:2px solid transparent;padding:8px 4px;color:var(--text-muted)}.pp-tabs button.selected{border-color:var(--accent);color:var(--text-primary)}
+.pp-help{border:1px solid var(--separator);width:var(--ui-help-size);height:var(--ui-help-size);border-radius:50%;padding:0;background:linear-gradient(var(--ui-button-top),var(--ui-button-bottom));font-weight:600;color:var(--accent)}
+.pp-sheet-mask{position:absolute;inset:0;z-index:9;background:#0002;display:flex;align-items:flex-start;justify-content:center}.pp-sheet{min-width:250px;max-width:90%;padding:18px 22px;border-radius:0 0 8px 8px;border:1px solid var(--separator);background:var(--surface);box-shadow:0 12px 28px #0004;line-height:1.5}.pp-sheet>div:not(.pp-sheet-actions){margin-top:9px}.pp-sheet-actions{display:flex;justify-content:flex-end;margin-top:16px}

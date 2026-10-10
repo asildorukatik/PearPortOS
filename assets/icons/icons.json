@@ -1,0 +1,327 @@
+{
+  "pearder": {
+    "source": "user-provided",
+    "file": "assets/icons/user/finder.png",
+    "shape": "folder"
+  },
+  "launchpad": {
+    "source": "user-provided",
+    "file": "assets/icons/user/launchpad-launcher.png",
+    "shape": "circle"
+  },
+  "pearsafari": {
+    "source": "user-provided",
+    "file": "assets/icons/user/safari.png",
+    "shape": "circle"
+  },
+  "mail": {
+    "source": "user-provided",
+    "file": "assets/icons/user/mail.png",
+    "shape": "original"
+  },
+  "contacts": {
+    "source": "user-provided",
+    "file": "assets/icons/user/addressbook.png",
+    "shape": "book"
+  },
+  "calendar": {
+    "source": "user-provided",
+    "file": "assets/icons/user/ical.png",
+    "shape": "original"
+  },
+  "notes": {
+    "source": "user-provided",
+    "file": "assets/icons/user/notes.png",
+    "shape": "original"
+  },
+  "reminders": {
+    "source": "user-provided",
+    "file": "assets/icons/user/reminders.png",
+    "shape": "original"
+  },
+  "maps": {
+    "source": "user-provided",
+    "file": "assets/icons/user/maps.png",
+    "shape": "original"
+  },
+  "photos": {
+    "source": "user-provided",
+    "file": "assets/icons/user/photos.png",
+    "shape": "flower"
+  },
+  "messages": {
+    "source": "user-provided",
+    "file": "assets/icons/user/ichat.png",
+    "shape": "speech bubble"
+  },
+  "facetime": {
+    "source": "user-provided",
+    "file": "assets/icons/user/facetime.png",
+    "shape": "original"
+  },
+  "music": {
+    "source": "user-provided",
+    "file": "assets/icons/user/music.png",
+    "shape": "circle"
+  },
+  "podcasts": {
+    "source": "user-provided",
+    "file": "assets/icons/user/podcasts.png",
+    "shape": "circle"
+  },
+  "tv": {
+    "source": "user-provided",
+    "file": "assets/icons/user/tv.png",
+    "shape": "original"
+  },
+  "books": {
+    "source": "user-provided",
+    "file": "assets/icons/user/ibooksx.png",
+    "shape": "book"
+  },
+  "appstore": {
+    "source": "user-provided",
+    "file": "assets/icons/user/appstore.png",
+    "shape": "circle"
+  },
+  "terminal": {
+    "source": "user-provided",
+    "file": "assets/icons/user/terminal.png",
+    "shape": "original"
+  },
+  "activity": {
+    "source": "user-provided",
+    "file": "assets/icons/user/activitymonitor.png",
+    "shape": "original"
+  },
+  "preferences": {
+    "source": "elementary",
+    "file": "assets/icons/elementary/preferences.svg",
+    "shape": "round gear"
+  },
+  "folder": {
+    "source": "custom",
+    "file": "assets/icons/folder.svg",
+    "shape": "folder"
+  },
+  "trash": {
+    "source": "custom",
+    "file": "assets/icons/trash.svg",
+    "shape": "bin"
+  },
+  "pref-general": {
+    "source": "custom",
+    "file": "assets/icons/pref-general.svg",
+    "shape": "original rounded tile"
+  },
+  "pref-desktop": {
+    "source": "custom",
+    "file": "assets/icons/pref-desktop.svg",
+    "shape": "original rounded tile"
+  },
+  "pref-dock": {
+    "source": "custom",
+    "file": "assets/icons/pref-dock.svg",
+    "shape": "original rounded tile"
+  },
+  "pref-mission": {
+    "source": "custom",
+    "file": "assets/icons/pref-mission.svg",
+    "shape": "original rounded tile"
+  },
+  "pref-siri": {
+    "source": "custom",
+    "file": "assets/icons/pref-siri.svg",
+    "shape": "original rounded tile"
+  },
+  "pref-spotlight": {
+    "source": "custom",
+    "file": "assets/icons/pref-spotlight.svg",
+    "shape": "original rounded tile"
+  },
+  "pref-language": {
+    "source": "custom",
+    "file": "assets/icons/pref-language.svg",
+    "shape": "original rounded tile"
+  },
+  "pref-notifications": {
+    "source": "custom",
+    "file": "assets/icons/pref-notifications.svg",
+    "shape": "original rounded tile"
+  },
+  "pref-accounts": {
+    "source": "custom",
+    "file": "assets/icons/pref-accounts.svg",
+    "shape": "original rounded tile"
+  },
+  "pref-users": {
+    "source": "custom",
+    "file": "assets/icons/pref-users.svg",
+    "shape": "original rounded tile"
+  },
+  "pref-accessibility": {
+    "source": "custom",
+    "file": "assets/icons/pref-accessibility.svg",
+    "shape": "original rounded tile"
+  },
+  "pref-security": {
+    "source": "custom",
+    "file": "assets/icons/pref-security.svg",
+    "shape": "original rounded tile"
+  },
+  "pref-update": {
+    "source": "custom",
+    "file": "assets/icons/pref-update.svg",
+    "shape": "original rounded tile"
+  },
+  "pref-network": {
+    "source": "custom",
+    "file": "assets/icons/pref-network.svg",
+    "shape": "original rounded tile"
+  },
+  "pref-bluetooth": {
+    "source": "custom",
+    "file": "assets/icons/pref-bluetooth.svg",
+    "shape": "original rounded tile"
+  },
+  "pref-sound": {
+    "source": "custom",
+    "file": "assets/icons/pref-sound.svg",
+    "shape": "original rounded tile"
+  },
+  "pref-printers": {
+    "source": "custom",
+    "file": "assets/icons/pref-printers.svg",
+    "shape": "original rounded tile"
+  },
+  "pref-keyboard": {
+    "source": "custom",
+    "file": "assets/icons/pref-keyboard.svg",
+    "shape": "original rounded tile"
+  },
+  "pref-trackpad": {
+    "source": "custom",
+    "file": "assets/icons/pref-trackpad.svg",
+    "shape": "original rounded tile"
+  },
+  "pref-mouse": {
+    "source": "custom",
+    "file": "assets/icons/pref-mouse.svg",
+    "shape": "original rounded tile"
+  },
+  "pref-displays": {
+    "source": "custom",
+    "file": "assets/icons/pref-displays.svg",
+    "shape": "original rounded tile"
+  },
+  "pref-energy": {
+    "source": "custom",
+    "file": "assets/icons/pref-energy.svg",
+    "shape": "original rounded tile"
+  },
+  "pref-datetime": {
+    "source": "custom",
+    "file": "assets/icons/pref-datetime.svg",
+    "shape": "original rounded tile"
+  },
+  "pref-sharing": {
+    "source": "custom",
+    "file": "assets/icons/pref-sharing.svg",
+    "shape": "original rounded tile"
+  },
+  "pref-backup": {
+    "source": "custom",
+    "file": "assets/icons/pref-backup.svg",
+    "shape": "original rounded tile"
+  },
+  "pref-startup": {
+    "source": "custom",
+    "file": "assets/icons/pref-startup.svg",
+    "shape": "original rounded tile"
+  },
+  "calculator": {
+    "source": "user-provided",
+    "file": "assets/icons/user/calculator.png",
+    "shape": "native silhouette"
+  },
+  "textedit": {
+    "source": "user-provided",
+    "file": "assets/icons/user/textedit.png",
+    "shape": "native silhouette"
+  },
+  "preview": {
+    "source": "user-provided",
+    "file": "assets/icons/user/preview.png",
+    "shape": "native silhouette"
+  },
+  "about": {
+    "source": "user-provided",
+    "file": "assets/icons/user/aboutthismaclauncher.png",
+    "shape": "native silhouette"
+  },
+  "disk-utility": {
+    "source": "user-provided",
+    "file": "assets/icons/user/diskutility.png",
+    "shape": "native silhouette"
+  },
+  "keynote": {
+    "source": "user-provided",
+    "file": "assets/icons/user/iwork-keynote.png",
+    "shape": "native silhouette"
+  },
+  "numbers": {
+    "source": "user-provided",
+    "file": "assets/icons/user/iwork-numbers.png",
+    "shape": "native silhouette"
+  },
+  "pages": {
+    "source": "user-provided",
+    "file": "assets/icons/user/iwork-pages.png",
+    "shape": "native silhouette"
+  },
+  "photo-booth": {
+    "source": "user-provided",
+    "file": "assets/icons/user/photobooth.png",
+    "shape": "native silhouette"
+  },
+  "chess": {
+    "source": "user-provided",
+    "file": "assets/icons/user/chess.png",
+    "shape": "native silhouette"
+  },
+  "stocks": {
+    "source": "user-provided",
+    "file": "assets/icons/user/stocks.png",
+    "shape": "native silhouette"
+  },
+  "siri": {
+    "source": "user-provided",
+    "file": "assets/icons/user/siri-launcher.png",
+    "shape": "native silhouette"
+  },
+  "music-player": {
+    "source": "user-provided",
+    "file": "assets/icons/user/music.png",
+    "shape": "native silhouette"
+  },
+  "screenshot": {
+    "source": "user-provided",
+    "file": "assets/icons/user/screenshot-launcher.png",
+    "shape": "native silhouette"
+  },
+  "voice-memos": {
+    "source": "user-provided",
+    "file": "assets/icons/user/voicememos.png",
+    "shape": "native silhouette"
+  },
+  "time-machine": {
+    "source": "user-provided",
+    "file": "assets/icons/user/backup-launcher.png",
+    "shape": "native silhouette"
+  },
+  "xcode": {
+    "source": "user-provided",
+    "file": "assets/icons/user/dt-xcode.png",
+    "shape": "native silhouette"
+  }
+}

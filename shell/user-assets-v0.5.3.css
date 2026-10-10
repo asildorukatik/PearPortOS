@@ -1,0 +1,33 @@
+/* PearPortOS Catalina user-asset pack · v0.5.3
+   Original files are supplied by the project owner. All static desktop
+   backgrounds stay on disk, so there is no hotlinked remote wallpaper. */
+:root{
+ --catalina-day:url('../assets/wallpapers/Catalina-Day.jpg');
+ --catalina-dusk:url('../assets/wallpapers/Catalina-Dusk.jpg');
+ --catalina-night:url('../assets/wallpapers/Catalina-Night.jpg');
+}
+:root[data-wallpaper-phase="day"] .wallpaper,
+:root[data-wallpaper-phase="dusk"] .wallpaper,
+:root[data-wallpaper-phase="night"] .wallpaper{
+ background-color:#142741;
+ background-size:cover;
+ background-position:center center;
+ background-repeat:no-repeat;
+ filter:none !important;
+}
+:root[data-wallpaper-phase="day"] .wallpaper{background-image:var(--catalina-day) !important}
+:root[data-wallpaper-phase="dusk"] .wallpaper{background-image:var(--catalina-dusk) !important}
+:root[data-wallpaper-phase="night"] .wallpaper{background-image:var(--catalina-night) !important}
+:root[data-wallpaper-phase="day"] .prefs-wallpaper-preview{background-image:var(--catalina-day);background-size:cover;background-position:center}
+:root[data-wallpaper-phase="dusk"] .prefs-wallpaper-preview{background-image:var(--catalina-dusk);background-size:cover;background-position:center}
+:root[data-wallpaper-phase="night"] .prefs-wallpaper-preview{background-image:var(--catalina-night);background-size:cover;background-position:center}
+:root[data-wallpaper-custom="on"] .wallpaper,
+:root[data-wallpaper-custom="on"][data-dynamic="on"] .wallpaper{
+ background-image:var(--custom-wallpaper-url) !important;
+ background-size:cover;
+ background-position:center;
+}
+:root[data-wallpaper-custom="on"] .prefs-wallpaper-preview{background-image:var(--custom-wallpaper-url)}
+/* The supplied ICNS icons have individual silhouettes and transparent borders;
+   show them with their natural aspect ratio, without rounded-square masks. */
+.dock-icon,.launchpad-app img,.desktop-icon img,.prefs-grid-item img{object-fit:contain;clip-path:none;border-radius:0}

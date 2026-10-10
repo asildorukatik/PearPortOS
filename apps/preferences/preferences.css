@@ -1,0 +1,39 @@
+/* macOS Catalina 10.15 System Preferences icon grid (approximate). */
+.pp-window:has(.preferences-root) .window-body{overflow:hidden;background:var(--surface)}
+.pp-window:has(.preferences-root) .window-titlebar{background:var(--surface)}
+.preferences-root{display:flex;flex-direction:column;height:100%;font-size:var(--fs-body);color:var(--text-primary);user-select:none}
+.prefs-toolbar{flex:0 0 var(--prefs-toolbar-height);display:flex;align-items:center;padding:0 12px;gap:12px;border-bottom:1px solid var(--separator);background:var(--surface);position:relative}
+.prefs-nav{display:flex;flex:0 0 auto;gap:0}.prefs-nav button{height:var(--ui-button-height);min-width:28px;border:1px solid var(--ui-control-border);background:linear-gradient(var(--ui-button-top),var(--ui-button-bottom));color:var(--text-primary);font-size:16px;line-height:1}.prefs-nav button:first-child{border-radius:var(--ui-button-radius) 0 0 var(--ui-button-radius)}.prefs-nav button:nth-child(2){border-left:0;border-radius:0 var(--ui-button-radius) var(--ui-button-radius) 0}.prefs-nav button:nth-child(3){margin-left:8px;border-radius:var(--ui-button-radius)}.prefs-nav button:disabled{opacity:.35}
+.prefs-toolbar-title{font-weight:600;font-size:var(--fs-body);text-align:center;flex:1;min-width:0;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}
+.prefs-search{flex:0 1 var(--prefs-search-width);width:var(--prefs-search-width)}.prefs-search[hidden]{visibility:hidden!important;display:block!important}.prefs-search .pp-search{height:var(--ui-field-height)}
+.prefs-scroller{overflow-y:auto;overflow-x:hidden;flex:1;min-height:0;background:var(--surface-content)}.prefs-scroller::-webkit-scrollbar{width:7px}.prefs-scroller::-webkit-scrollbar-thumb{border-radius:8px;background:#8888}
+.prefs-grid-page{padding:15px 24px 25px;min-height:100%}.prefs-grid-page h1{text-align:center;font-size:19px;font-weight:400;margin:4px 0 12px}
+.prefs-grid-group{display:grid;grid-template-columns:repeat(var(--prefs-grid-columns),minmax(0,1fr));gap:var(--prefs-grid-gap);padding:11px 0;border-top:1px solid var(--separator)}
+.prefs-grid-group:first-of-type{border-top:0}
+.prefs-grid-item{display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:6px;min-width:0;min-height:var(--prefs-grid-cell-height);background:transparent;border:0;border-radius:4px;padding:3px 2px 7px;color:var(--text-primary);font-size:12px;line-height:1.2;text-align:center;white-space:normal}
+.prefs-grid-item[hidden],.prefs-grid-group[hidden]{display:none}
+.prefs-grid-item img{width:var(--prefs-grid-icon);height:var(--prefs-grid-icon);object-fit:contain;filter:drop-shadow(0 2px 2px #0003)}
+.prefs-grid-item span{max-width:100%;overflow-wrap:normal}.prefs-grid-item:hover{background:rgba(127,127,127,.10)}.prefs-grid-item:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.prefs-bottom-note{text-align:center;font-size:var(--fs-small);color:var(--text-muted);padding-top:8px}
+.prefs-content-pane{max-width:670px;margin:0 auto;padding:var(--prefs-pane-padding);line-height:1.5;color:var(--text-primary)}
+.prefs-pane-heading{display:flex;justify-content:space-between;align-items:center;gap:14px}.prefs-pane-heading h2{font-size:18px;font-weight:600;margin:0 0 8px}.prefs-note{font-size:12px;color:var(--text-muted);line-height:1.5;margin:4px 0 18px}
+.prefs-content-pane>.pp-choice{display:flex;margin:12px 0 12px var(--ui-row-label-width);padding-left:var(--ui-control-gap)}
+.prefs-demo-heading{font-weight:600;margin:8px 0 6px}.prefs-accent-swatches{display:flex;gap:8px;flex-wrap:wrap}
+.prefs-accent-swatch{position:relative;width:19px;height:19px;border-radius:50%;border:1px solid #0003;box-shadow:inset 0 1px #fff4;background:var(--accent);padding:0}
+.prefs-accent-swatch[data-accent="blue"]{background:#0a64ff}.prefs-accent-swatch[data-accent="purple"]{background:#af52de}.prefs-accent-swatch[data-accent="pink"]{background:#ff2d55}.prefs-accent-swatch[data-accent="red"]{background:#ff3b30}.prefs-accent-swatch[data-accent="orange"]{background:#ff9500}.prefs-accent-swatch[data-accent="yellow"]{background:#ffcc00}.prefs-accent-swatch[data-accent="green"]{background:#28cd41}.prefs-accent-swatch[data-accent="graphite"]{background:#8e8e93}.prefs-accent-swatch.selected{box-shadow:0 0 0 2px var(--surface-content),0 0 0 4px var(--accent)}
+.prefs-wallpaper-preview{height:108px;width:180px;margin:18px auto;border:5px solid #242424;border-radius:5px;background-image:url('../../assets/wallpapers/Pear-Island.svg');background-position:center;background-size:cover;box-shadow:0 3px 12px #0003}
+.prefs-unavailable{text-align:center;max-width:360px;margin:42px auto}.prefs-unavailable-icon{height:55px;font-size:50px;color:var(--text-muted);line-height:1}
+.prefs-unavailable .prefs-note{font-size:13px}.prefs-content-pane .pp-fieldrow .pp-slider{max-width:160px}
+.prefs-content-pane .pp-row-field:has(input[type="range"]){flex-direction:row;align-items:center}
+.prefs-content-pane [data-out]{font-size:11px;white-space:nowrap;color:var(--text-muted)}
+.prefs-content-pane .pp-radio-group{max-width:100%;gap:12px}
+.prefs-content-pane .pp-radio-group label{white-space:nowrap}
+.prefs-content-pane .pp-stepper{gap:5px}
+@media(max-width:640px){:root{--prefs-grid-columns:4;--prefs-grid-gap:4px;--prefs-grid-cell-height:78px;--prefs-grid-icon:34px;--prefs-pane-padding:15px;--ui-row-label-width:95px;--prefs-search-width:110px}.prefs-grid-page{padding:10px}.prefs-toolbar{gap:5px;padding:0 8px}.prefs-grid-item{font-size:10px}.prefs-toolbar-title{font-size:11px}}
+@media(max-width:420px){:root{--prefs-grid-columns:3;--prefs-grid-icon:28px;--ui-row-label-width:75px;--prefs-search-width:82px}.prefs-grid-group{gap:0}.prefs-grid-item{min-height:65px}.prefs-toolbar-title{font-size:10px}}
+/* Unified Catalina preference toolbar. Chrome/traffic overlay, without a second title row. */
+.pp-window:has(.preferences-root) .window-titlebar{position:absolute;inset:0 0 auto;z-index:5;width:100%;height:0;flex-basis:0;overflow:visible;background:none;border:0;pointer-events:none}
+.pp-window:has(.preferences-root) .window-title{display:none}
+.pp-window:has(.preferences-root) .traffic{height:var(--prefs-toolbar-height);pointer-events:auto}
+.pp-window:has(.preferences-root) .prefs-toolbar{padding-left:var(--prefs-toolbar-left);touch-action:none}
+.pp-inline{display:flex;gap:8px;align-items:center;flex-wrap:wrap}

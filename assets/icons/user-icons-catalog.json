@@ -1,0 +1,362 @@
+[
+  {
+    "name": "AboutThisMacLauncher",
+    "source": "docs/com.doruk.AboutThisMacLauncher/AppIcon.icns",
+    "file": "assets/icons/user/aboutthismaclauncher.png"
+  },
+  {
+    "name": "ActivityMonitor",
+    "source": "docs/com.doruk.ActivityMonitor/AppIcon.icns",
+    "file": "assets/icons/user/activitymonitor.png"
+  },
+  {
+    "name": "AddressBook",
+    "source": "docs/com.doruk.AddressBook/Contacts.icns",
+    "file": "assets/icons/user/addressbook.png"
+  },
+  {
+    "name": "AppStore",
+    "source": "docs/com.doruk.AppStore/AppIcon.icns",
+    "file": "assets/icons/user/appstore.png"
+  },
+  {
+    "name": "Automator",
+    "source": "docs/com.doruk.Automator/Automator.icns",
+    "file": "assets/icons/user/automator.png"
+  },
+  {
+    "name": "BluetoothFileExchange",
+    "source": "docs/com.doruk.BluetoothFileExchange/BluetoothFileExchange.icns",
+    "file": "assets/icons/user/bluetoothfileexchange.png"
+  },
+  {
+    "name": "Chess",
+    "source": "docs/com.doruk.Chess/Chess.icns",
+    "file": "assets/icons/user/chess.png"
+  },
+  {
+    "name": "ColorSyncUtility",
+    "source": "docs/com.doruk.ColorSyncUtility/ColorSyncUtility.icns",
+    "file": "assets/icons/user/colorsyncutility.png"
+  },
+  {
+    "name": "Console",
+    "source": "docs/com.doruk.Console/AppIcon.icns",
+    "file": "assets/icons/user/console.png"
+  },
+  {
+    "name": "DVDPlayer",
+    "source": "docs/com.doruk.DVDPlayer/AppIcon.icns",
+    "file": "assets/icons/user/dvdplayer.png"
+  },
+  {
+    "name": "Dictionary",
+    "source": "docs/com.doruk.Dictionary/Dictionary.icns",
+    "file": "assets/icons/user/dictionary.png"
+  },
+  {
+    "name": "DigitalColorMeter",
+    "source": "docs/com.doruk.DigitalColorMeter/AppIcons.icns",
+    "file": "assets/icons/user/digitalcolormeter.png"
+  },
+  {
+    "name": "DirectoryUtility",
+    "source": "docs/com.doruk.DirectoryUtility/DirectoryUtility.icns",
+    "file": "assets/icons/user/directoryutility.png"
+  },
+  {
+    "name": "DiskUtility",
+    "source": "docs/com.doruk.DiskUtility/AppIcon.icns",
+    "file": "assets/icons/user/diskutility.png"
+  },
+  {
+    "name": "FaceTime",
+    "source": "docs/com.doruk.FaceTime/AppIcon.icns",
+    "file": "assets/icons/user/facetime.png"
+  },
+  {
+    "name": "FolderActionsSetup",
+    "source": "docs/com.doruk.FolderActionsSetup/Folder Actions Setup.icns",
+    "file": "assets/icons/user/folderactionssetup.png"
+  },
+  {
+    "name": "FontBook",
+    "source": "docs/com.doruk.FontBook/appicon.icns",
+    "file": "assets/icons/user/fontbook.png"
+  },
+  {
+    "name": "Home",
+    "source": "docs/com.doruk.Home/AppIcon-mac.icns",
+    "file": "assets/icons/user/home.png"
+  },
+  {
+    "name": "Image_Capture",
+    "source": "docs/com.doruk.Image_Capture/ImageCapture.icns",
+    "file": "assets/icons/user/image-capture.png"
+  },
+  {
+    "name": "Maps",
+    "source": "docs/com.doruk.Maps/maps.icns",
+    "file": "assets/icons/user/maps.png"
+  },
+  {
+    "name": "MigrateAssistant",
+    "source": "docs/com.doruk.MigrateAssistant/MigrateAsst.icns",
+    "file": "assets/icons/user/migrateassistant.png"
+  },
+  {
+    "name": "Music",
+    "source": "docs/com.doruk.Music/AppIcon.icns",
+    "file": "assets/icons/user/music.png"
+  },
+  {
+    "name": "NetworkUtility",
+    "source": "docs/com.doruk.NetworkUtility/Network Utility.icns",
+    "file": "assets/icons/user/networkutility.png"
+  },
+  {
+    "name": "Notes",
+    "source": "docs/com.doruk.Notes/AppIcon.icns",
+    "file": "assets/icons/user/notes.png"
+  },
+  {
+    "name": "PhotoBooth",
+    "source": "docs/com.doruk.PhotoBooth/PhotoBoothIcon.icns",
+    "file": "assets/icons/user/photobooth.png"
+  },
+  {
+    "name": "Photos",
+    "source": "docs/com.doruk.Photos/AppIcon.icns",
+    "file": "assets/icons/user/photos.png"
+  },
+  {
+    "name": "Preview",
+    "source": "docs/com.doruk.Preview/Preview.icns",
+    "file": "assets/icons/user/preview.png"
+  },
+  {
+    "name": "QuickTimePlayerX",
+    "source": "docs/com.doruk.QuickTimePlayerX/QuickTimePlayerX.icns",
+    "file": "assets/icons/user/quicktimeplayerx.png"
+  },
+  {
+    "name": "SFSymbols",
+    "source": "docs/com.doruk.SFSymbols/AppIcon.icns",
+    "file": "assets/icons/user/sfsymbols.png"
+  },
+  {
+    "name": "Safari",
+    "source": "docs/com.doruk.Safari/compass.icns",
+    "file": "assets/icons/user/safari.png"
+  },
+  {
+    "name": "ScreenSharing",
+    "source": "docs/com.doruk.ScreenSharing/AppIcon.icns",
+    "file": "assets/icons/user/screensharing.png"
+  },
+  {
+    "name": "ScriptEditor2",
+    "source": "docs/com.doruk.ScriptEditor2/SEScriptEditorX.icns",
+    "file": "assets/icons/user/scripteditor2.png"
+  },
+  {
+    "name": "Stickies",
+    "source": "docs/com.doruk.Stickies/AppIcon.icns",
+    "file": "assets/icons/user/stickies.png"
+  },
+  {
+    "name": "StorageManagementLauncher",
+    "source": "docs/com.doruk.StorageManagementLauncher/AppIcon.icns",
+    "file": "assets/icons/user/storagemanagementlauncher.png"
+  },
+  {
+    "name": "SystemProfiler",
+    "source": "docs/com.doruk.SystemProfiler/ASP.icns",
+    "file": "assets/icons/user/systemprofiler.png"
+  },
+  {
+    "name": "TV",
+    "source": "docs/com.doruk.TV/AppIcon.icns",
+    "file": "assets/icons/user/tv.png"
+  },
+  {
+    "name": "Terminal",
+    "source": "docs/com.doruk.Terminal/Terminal.icns",
+    "file": "assets/icons/user/terminal.png"
+  },
+  {
+    "name": "TextEdit",
+    "source": "docs/com.doruk.TextEdit/Edit.icns",
+    "file": "assets/icons/user/textedit.png"
+  },
+  {
+    "name": "Ticket-Viewer",
+    "source": "docs/com.doruk.Ticket-Viewer/TicketViewer.icns",
+    "file": "assets/icons/user/ticket-viewer.png"
+  },
+  {
+    "name": "VoiceMemos",
+    "source": "docs/com.doruk.VoiceMemos/MacAppIcon.icns",
+    "file": "assets/icons/user/voicememos.png"
+  },
+  {
+    "name": "VoiceOverUtility",
+    "source": "docs/com.doruk.VoiceOverUtility/voiceover.icns",
+    "file": "assets/icons/user/voiceoverutility.png"
+  },
+  {
+    "name": "airport.airportutility",
+    "source": "docs/com.doruk.airport.airportutility/AirPortUtility.icns",
+    "file": "assets/icons/user/airport-airportutility.png"
+  },
+  {
+    "name": "appleseed.FeedbackAssistant",
+    "source": "docs/com.doruk.appleseed.FeedbackAssistant/AppIcon.icns",
+    "file": "assets/icons/user/appleseed-feedbackassistant.png"
+  },
+  {
+    "name": "archiveutility",
+    "source": "docs/com.doruk.archiveutility/ArchiveUtility.icns",
+    "file": "assets/icons/user/archiveutility.png"
+  },
+  {
+    "name": "audio.AudioMIDISetup",
+    "source": "docs/com.doruk.audio.AudioMIDISetup/AudioMIDISetup.icns",
+    "file": "assets/icons/user/audio-audiomidisetup.png"
+  },
+  {
+    "name": "backup.launcher",
+    "source": "docs/com.doruk.backup.launcher/backup.icns",
+    "file": "assets/icons/user/backup-launcher.png"
+  },
+  {
+    "name": "bootcampassistant",
+    "source": "docs/com.doruk.bootcampassistant/DA.icns",
+    "file": "assets/icons/user/bootcampassistant.png"
+  },
+  {
+    "name": "calculator",
+    "source": "docs/com.doruk.calculator/AppIcon.icns",
+    "file": "assets/icons/user/calculator.png"
+  },
+  {
+    "name": "dt.Xcode",
+    "source": "docs/com.doruk.dt.Xcode/Xcode.icns",
+    "file": "assets/icons/user/dt-xcode.png"
+  },
+  {
+    "name": "exposelauncher",
+    "source": "docs/com.doruk.exposelauncher/Expose.icns",
+    "file": "assets/icons/user/exposelauncher.png"
+  },
+  {
+    "name": "finder",
+    "source": "docs/com.doruk.finder/Finder.icns",
+    "file": "assets/icons/user/finder.png"
+  },
+  {
+    "name": "findmy",
+    "source": "docs/com.doruk.findmy/AppIcon.icns",
+    "file": "assets/icons/user/findmy.png"
+  },
+  {
+    "name": "garageband10",
+    "source": "docs/com.doruk.garageband10/GarageBand.icns",
+    "file": "assets/icons/user/garageband10.png"
+  },
+  {
+    "name": "grapher",
+    "source": "docs/com.doruk.grapher/Grapher.icns",
+    "file": "assets/icons/user/grapher.png"
+  },
+  {
+    "name": "iBooksX",
+    "source": "docs/com.doruk.iBooksX/iBooksAppIcon.icns",
+    "file": "assets/icons/user/ibooksx.png"
+  },
+  {
+    "name": "iCal",
+    "source": "docs/com.doruk.iCal/App.icns",
+    "file": "assets/icons/user/ical.png"
+  },
+  {
+    "name": "iChat",
+    "source": "docs/com.doruk.iChat/MessagesAppIcon.icns",
+    "file": "assets/icons/user/ichat.png"
+  },
+  {
+    "name": "iMovieApp",
+    "source": "docs/com.doruk.iMovieApp/iMovie.icns",
+    "file": "assets/icons/user/imovieapp.png"
+  },
+  {
+    "name": "iWork.Keynote",
+    "source": "docs/com.doruk.iWork.Keynote/AppIcon.icns",
+    "file": "assets/icons/user/iwork-keynote.png"
+  },
+  {
+    "name": "iWork.Numbers",
+    "source": "docs/com.doruk.iWork.Numbers/AppIcon.icns",
+    "file": "assets/icons/user/iwork-numbers.png"
+  },
+  {
+    "name": "iWork.Pages",
+    "source": "docs/com.doruk.iWork.Pages/AppIcon.icns",
+    "file": "assets/icons/user/iwork-pages.png"
+  },
+  {
+    "name": "keychainaccess",
+    "source": "docs/com.doruk.keychainaccess/AppIcon.icns",
+    "file": "assets/icons/user/keychainaccess.png"
+  },
+  {
+    "name": "launchpad.launcher",
+    "source": "docs/com.doruk.launchpad.launcher/Launchpad.icns",
+    "file": "assets/icons/user/launchpad-launcher.png"
+  },
+  {
+    "name": "mail",
+    "source": "docs/com.doruk.mail/ApplicationIcon.icns",
+    "file": "assets/icons/user/mail.png"
+  },
+  {
+    "name": "news",
+    "source": "docs/com.doruk.news/AppIcon.icns",
+    "file": "assets/icons/user/news.png"
+  },
+  {
+    "name": "podcasts",
+    "source": "docs/com.doruk.podcasts/AppIcon.icns",
+    "file": "assets/icons/user/podcasts.png"
+  },
+  {
+    "name": "reminders",
+    "source": "docs/com.doruk.reminders/AppIcon.icns",
+    "file": "assets/icons/user/reminders.png"
+  },
+  {
+    "name": "screenshot.launcher",
+    "source": "docs/com.doruk.screenshot.launcher/AppIcon.icns",
+    "file": "assets/icons/user/screenshot-launcher.png"
+  },
+  {
+    "name": "siri.launcher",
+    "source": "docs/com.doruk.siri.launcher/Siri.icns",
+    "file": "assets/icons/user/siri-launcher.png"
+  },
+  {
+    "name": "stocks",
+    "source": "docs/com.doruk.stocks/AppIcon_macOS.icns",
+    "file": "assets/icons/user/stocks.png"
+  },
+  {
+    "name": "systempreferences",
+    "source": "docs/com.doruk.systempreferences/PrefApp.icns",
+    "file": "assets/icons/user/systempreferences.png"
+  },
+  {
+    "name": "wifi.diagnostics",
+    "source": "docs/com.doruk.wifi.diagnostics/WirelessDiagnostics.icns",
+    "file": "assets/icons/user/wifi-diagnostics.png"
+  }
+]

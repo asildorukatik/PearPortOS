@@ -1,0 +1,434 @@
+/* PearPortOS Catalina calibration tokens. Screenshot-derived estimates and
+   assumptions are documented in CALIBRATION.md. All CSS geometry is centralized here. */
+:root {
+  --calendar-width: 920px; /* ASSUMED – verify with screenshot */
+  --calendar-height: 615px; /* ASSUMED – verify with screenshot */
+  --accent: #0a64ff; /* ASSUMED – verify with screenshot */
+  --accent-rgb: 10,100,255; /* ASSUMED – verify with screenshot */
+  --menu-height: 22px; /* ASSUMED – verify with screenshot (small reference appears ~7 raster px) */
+  --menu-font-size: 13px; /* MEASURED/ESTIMATED – 1536px Catalina System Preferences screenshot */
+  --menu-item-height: 20px; /* MEASURED/ESTIMATED – 1536px Catalina Finder menu screenshot */
+  --menu-gap: 17px; /* MEASURED/ESTIMATED – 1536px Catalina System Preferences screenshot */
+  --menu-padding-x: 14px; /* MEASURED/ESTIMATED – 1536px Catalina System Preferences screenshot */
+  --menu-popup-radius: 5px; /* ASSUMED – verify with screenshot */
+  --menu-popup-padding: 4px; /* ASSUMED – verify with screenshot */
+  --menu-popup-width: 235px; /* ASSUMED – verify with screenshot */
+  --menu-popup-shadow: 0 10px 24px rgba(0,0,0,.25); /* ASSUMED – verify with screenshot */
+  --menu-popup-blur: 20px; /* ASSUMED – verify with screenshot */
+  --status-gap: 10px; /* ASSUMED – verify with screenshot */
+  --status-icon-size: 15px; /* ASSUMED – verify with screenshot */
+  --menu-background: rgba(236,236,236,.82); /* ASSUMED – verify with screenshot */
+  --menu-popup-background: rgba(247,247,249,.95); /* ASSUMED – verify with screenshot */
+  --menu-text: rgba(17,17,21,.91); /* ASSUMED – verify with screenshot */
+  --menu-border: rgba(0,0,0,.18); /* ASSUMED – verify with screenshot */
+  --surface: #ececec; /* ASSUMED – verify with screenshot */
+  --surface-content: #ffffff; /* ASSUMED – verify with screenshot */
+  --text-primary: rgba(0,0,0,.85); /* ASSUMED – verify with screenshot */
+  --text-muted: rgba(0,0,0,.52); /* ASSUMED – verify with screenshot */
+  --separator: rgba(0,0,0,.16); /* ASSUMED – verify with screenshot */
+  --window-screen-edge: 22px; /* ASSUMED – verify with screenshot */
+  --window-top-offset: 24px; /* ASSUMED – verify with screenshot */
+  --window-cascade-x: 32px; /* ASSUMED – verify with screenshot */
+  --window-cascade-y: 25px; /* ASSUMED – verify with screenshot */
+  --window-safe-bottom: 15px; /* ASSUMED – verify with screenshot */
+  --window-max-height-reserve: 54px; /* ASSUMED – verify with screenshot */
+  --window-initial-x: 20px; /* ASSUMED – verify with screenshot */
+  --window-min-visible-x: 70px; /* ASSUMED – verify with screenshot */
+  --window-min-visible-y: 30px; /* ASSUMED – verify with screenshot */
+  --popup-item-font-size: 13px; /* ASSUMED – verify with screenshot */
+  --popup-item-padding-x: 18px; /* ASSUMED – verify with screenshot */
+  --popup-shortcut-font-size: 12px; /* ASSUMED – verify with screenshot */
+  --status-clock-font-size: 12px; /* ASSUMED – verify with screenshot */
+  --window-content-font-size: 13px; /* ASSUMED – verify with screenshot */
+  --window-titlebar-border-width: 1px; /* ASSUMED – verify with screenshot */
+  --window-traffic-glyph-size: 10px; /* ASSUMED – verify with screenshot */
+  --desktop-selection-alpha: .2; /* ASSUMED – verify with screenshot */
+  --window-radius: 5px; /* ASSUMED – verify with screenshot */
+  --window-title-height: 22px; /* ASSUMED – verify with screenshot */
+  --window-toolbar-height: 38px; /* ASSUMED – verify with screenshot */
+  --window-default-width: 630px; /* ASSUMED – verify with screenshot */
+  --window-default-height: 412px; /* ASSUMED – verify with screenshot */
+  --window-min-width: 285px; /* ASSUMED – verify with screenshot */
+  --window-min-height: 155px; /* ASSUMED – verify with screenshot */
+  --window-shadow: 0 22px 70px 4px rgba(0,0,0,.3); /* ASSUMED – verify with screenshot */
+  --window-shadow-inactive: 0 9px 29px 0 rgba(0,0,0,.16); /* ASSUMED – verify with screenshot */
+  --window-stroke: 1px solid rgba(0,0,0,.22); /* ASSUMED – verify with screenshot */
+  --window-title-size: 13px; /* ASSUMED – verify with screenshot */
+  --window-content-padding: 22px; /* ASSUMED – verify with screenshot */
+  --traffic-size: 12px; /* ASSUMED – verify with screenshot */
+  --traffic-gap: 8px; /* ASSUMED – verify with screenshot */
+  --traffic-left: 8px; /* ASSUMED – verify with screenshot */
+  --traffic-close: #ff5f56; /* ASSUMED – verify with screenshot */
+  --traffic-close-border: #e0443e; /* ASSUMED – verify with screenshot */
+  --traffic-minimize: #ffbd2e; /* ASSUMED – verify with screenshot */
+  --traffic-minimize-border: #dea123; /* ASSUMED – verify with screenshot */
+  --traffic-zoom: #27c93f; /* ASSUMED – verify with screenshot */
+  --traffic-zoom-border: #1aab29; /* ASSUMED – verify with screenshot */
+  --traffic-inactive: #d0d0d0; /* ASSUMED – verify with screenshot */
+  --dock-icon-size: clamp(28px, 3.3vw, 53px); /* MEASURED/ESTIMATED – 1536px System Preferences screenshot; fit() handles small viewports */
+  --dock-max-scale: 2; /* ASSUMED – verify with screenshot */
+  --dock-icon-gap: 5px; /* MEASURED/ESTIMATED – Catalina 1536px dock screenshot */
+  --dock-padding-x: 10px; /* MEASURED/ESTIMATED – Catalina 1536px dock screenshot */
+  --dock-padding-y: 4px; /* MEASURED/ESTIMATED – Catalina 1536px dock screenshot */
+  --dock-radius: 10px; /* MEASURED/ESTIMATED – Catalina 1536px dock screenshot */
+  --dock-bottom-gap: 6px; /* ASSUMED – verify with screenshot */
+  --dock-border: rgba(255,255,255,.35); /* ASSUMED – verify with screenshot */
+  --dock-background: rgba(232,232,237,.49); /* ASSUMED – verify with screenshot */
+  --dock-blur: 25px; /* ASSUMED – verify with screenshot */
+  --dock-indicator-size: 4px; /* ASSUMED – verify with screenshot */
+  --dock-separator-height: 39px; /* ASSUMED – verify with screenshot */
+  --dock-tooltip-radius: 5px; /* ASSUMED – verify with screenshot */
+  --dock-tooltip-offset: 13px; /* ASSUMED – verify with screenshot */
+  --dock-magnify-radius: 4; /* ASSUMED – verify with screenshot */
+  --dock-bounce-height: 20px; /* ASSUMED – verify with screenshot */
+  --dock-tooltip-padding-y: 5px; /* ASSUMED – verify with screenshot */
+  --dock-tooltip-padding-x: 11px; /* ASSUMED – verify with screenshot */
+  --window-edge-snap-distance: 12px; /* ASSUMED – verify with screenshot/video */
+  --window-zoom-bottom-reserve: 20px; /* ASSUMED – verify with screenshot */
+  --dock-fit-margin: 14px; /* ASSUMED – verify with screenshot */
+  --drag-start-threshold: 3px; /* ASSUMED – verify with screenshot */
+  --desktop-cell-width: 83px; /* ASSUMED – verify with screenshot */
+  --desktop-cell-height: 88px; /* ASSUMED – verify with screenshot */
+  --desktop-icon-size: 56px; /* ESTIMATED – desktop right-edge screenshot */
+  --desktop-icon-text-size: 12px; /* ASSUMED – verify with screenshot */
+  --desktop-top-gap: 27px; /* ASSUMED – verify with screenshot */
+  --desktop-edge-gap: 15px; /* ASSUMED – verify with screenshot */
+  --desktop-selection-border: 1px; /* ASSUMED – verify with screenshot */
+  --popover-width: 290px; /* ASSUMED – verify with screenshot */
+  --popover-radius: 6px; /* ASSUMED – verify with screenshot */
+  --debug-width: 320px; /* ASSUMED – debug UI, not Catalina */
+  --debug-grid-spacing: 10px; /* ASSUMED – debug UI, not Catalina */
+  --debug-panel-offset: 33px; /* ASSUMED – debug UI, not Catalina */
+  --compare-opacity: .5; /* ASSUMED – debug UI, not Catalina */
+  --compare-shift-x: 0px; /* ASSUMED – debug UI, not Catalina */
+  --compare-shift-y: 0px; /* ASSUMED – debug UI, not Catalina */
+  --compare-scale: 1; /* ASSUMED – debug UI, not Catalina */
+  --anim-window-open: 220ms; /* ASSUMED – verify with screenshot/video */
+  --anim-window-close: 150ms; /* ASSUMED – verify with screenshot/video */
+  --anim-minimize: 450ms; /* ASSUMED – verify with screenshot/video */
+  --anim-menu: 90ms; /* ASSUMED – verify with screenshot/video */
+  --anim-theme: 300ms; /* ASSUMED – verify with screenshot/video */
+  --ease-system: cubic-bezier(.25,.1,.25,1); /* ASSUMED – verify with screenshot/video */
+  --z-wallpaper: 0; --z-desktop: 1; --z-windows: 10; --z-dock: 4000;
+  --z-menu: 5000; --z-popup: 6000; --z-debug: 9000;
+}
+:root[data-theme="dark"] {
+  --accent: #0a84ff; --accent-rgb: 10,132,255;
+  --menu-background: rgba(30,30,30,.8);
+  --menu-popup-background: rgba(43,43,45,.96);
+  --menu-text: rgba(255,255,255,.92);
+  --menu-border: rgba(255,255,255,.18);
+  --surface: #282828; --surface-content: #1e1e1e;
+  --text-primary: rgba(255,255,255,.88);
+  --text-muted: rgba(255,255,255,.54);
+  --separator: rgba(255,255,255,.16);
+  --window-stroke: 1px solid rgba(255,255,255,.2);
+  --traffic-inactive: #555;
+  --dock-background: rgba(46,51,63,.48);
+  --dock-border: rgba(255,255,255,.2);
+}
+/* Phase 2.2 Dock interaction values (ASSUMED – verify with screenshot/video). */
+:root {
+  --dock-reveal-height: 8px; /* ASSUMED – verify with screenshot/video */
+  --dock-hidden-peek: 2px; /* ASSUMED – verify with screenshot/video */
+  --dock-auto-hide-duration: 280ms; /* ASSUMED – verify with screenshot/video */
+  --dock-hide-delay: 320ms; /* ASSUMED – verify with screenshot/video */
+  --dock-divider-width: 1px; /* ASSUMED – verify with screenshot */
+  --dock-divider-margin: 4px; /* ASSUMED – verify with screenshot */
+  --dock-fit-min-size: 8px; /* ASSUMED – verify with screenshot */
+  --dock-popup-edge-margin: 6px; /* ASSUMED – verify with screenshot */
+  --dock-bounce-duration: 1440ms; /* ASSUMED – verify with video */
+  --window-drag-anchor-y: 11px; /* ASSUMED – verify with video */
+}
+:root { --dock-drag-indicator-width: 3px; /* ASSUMED – verify with screenshot */ }
+
+/* Phase 3: Catalina (10.15.7) preferences/control dimensions.
+   All values below are ASSUMED – verify with screenshot of real System Preferences. */
+:root {
+ --prefs-width: 724px; /* ASSUMED – verify with screenshot */
+ --prefs-height: 570px; /* ASSUMED – verify with screenshot */
+ --prefs-toolbar-height: 46px; /* ASSUMED – verify with screenshot */
+ --prefs-toolbar-left: 82px; /* ASSUMED – verify with screenshot */
+ --prefs-grid-icon: 39px; /* ASSUMED – verify with screenshot */
+ --prefs-grid-gap: 11px; /* ASSUMED – verify with screenshot */
+ --prefs-grid-columns: 5; /* ASSUMED – verify with screenshot */
+ --prefs-grid-cell-height: 83px; /* ASSUMED – verify with screenshot */
+ --prefs-search-width: 166px; /* ASSUMED – verify with screenshot */
+ --prefs-pane-padding: 24px; /* ASSUMED – verify with screenshot */
+ --prefs-row-height: 36px; /* ASSUMED – verify with screenshot */
+ --prefs-divider-gap: 13px; /* ASSUMED – verify with screenshot */
+ --ui-button-height: 22px; /* ASSUMED – verify with screenshot */
+ --ui-button-radius: 5px; /* ASSUMED – verify with screenshot */
+ --ui-control-border: rgba(0,0,0,.28); /* ASSUMED – verify with screenshot */
+ --ui-button-top: #fff; /* ASSUMED – verify with screenshot */
+ --ui-button-bottom: #f1f1f1; /* ASSUMED – verify with screenshot */
+ --ui-field-background: #fff; /* ASSUMED – verify with screenshot */
+ --ui-disabled-alpha: .45; /* ASSUMED – verify with screenshot */
+ --ui-checkbox-size: 14px; /* ASSUMED – verify with screenshot */
+ --ui-checkbox-radius: 3px; /* ASSUMED – verify with screenshot */
+ --ui-focus-ring-size: 3px; /* ASSUMED – verify with screenshot */
+ --ui-focus-ring-alpha: .50; /* ASSUMED – verify with screenshot */
+ --ui-push-padding-x: 13px; /* ASSUMED – verify with screenshot */
+ --ui-field-height: 23px; /* ASSUMED – verify with screenshot */
+ --ui-popup-width: 180px; /* ASSUMED – verify with screenshot */
+ --ui-slider-track-height: 4px; /* ASSUMED – verify with screenshot */
+ --ui-slider-knob-size: 16px; /* ASSUMED – verify with screenshot */
+ --ui-segment-radius: 5px; /* ASSUMED – verify with screenshot */
+ --ui-control-gap: 10px; /* ASSUMED – verify with screenshot */
+ --ui-row-label-width: 135px; /* ASSUMED – verify with screenshot */
+ --ui-help-size: 20px; /* ASSUMED – verify with screenshot */
+ --prefs-icon-shade-1: #53b4ef; /* ASSUMED – original icons */
+ --prefs-icon-shade-2: #1871b8; /* ASSUMED – original icons */
+ --dock-axis-gap: 12px; /* ASSUMED – verify with screenshot */
+}
+:root[data-theme="dark"] {
+ --ui-control-border: rgba(255,255,255,.31);
+ --ui-button-top: #535355; --ui-button-bottom: #414143;
+ --ui-field-background: #323235;
+}
+
+/* Phase 4 Pearder / Quick Look / Terminal geometry.
+   All values below ASSUMED – verify against Catalina Finder and Terminal screenshots. */
+:root {
+ --pearder-width: 820px; /* ASSUMED – verify with Finder screenshot */
+ --pearder-height: 525px; /* ASSUMED – verify with Finder screenshot */
+ --pearder-toolbar-height: 42px; /* ASSUMED – verify with Finder toolbar screenshot */
+ --pearder-toolbar-left: 82px; /* ASSUMED – verify with Finder toolbar screenshot */
+ --pearder-toolbar-pad: 11px; /* ASSUMED – verify with Finder screenshot */
+ --pearder-toolbar-gap: 7px; /* ASSUMED – verify with Finder screenshot */
+ --pearder-toolbar-button-height: 25px; /* ASSUMED – verify with Finder screenshot */
+ --pearder-nav-size: 24px; /* ASSUMED – verify with Finder screenshot */
+ --pearder-title-max: 160px; /* ASSUMED – verify with Finder screenshot */
+ --pearder-search-width: 145px; /* ASSUMED – verify with Finder screenshot */
+ --pearder-search-min: 75px; /* ASSUMED – verify with Finder screenshot */
+ --pearder-search-pad: 8px; /* ASSUMED – verify with Finder screenshot */
+ --pearder-tabbar-height: 25px; /* ASSUMED – verify with Catalina Finder tab screenshot */
+ --pearder-tabbar-inset: 0px; /* ASSUMED – verify with Catalina Finder tab screenshot */
+ --pearder-tab-width: 165px; /* ASSUMED – verify with Catalina Finder tab screenshot */
+ --pearder-tab-close-size: 23px; /* ASSUMED – verify with Catalina Finder tab screenshot */
+ --pearder-sidebar-width: 176px; /* ASSUMED – verify with Finder screenshot */
+ --pearder-sidebar-narrow: 112px; /* ASSUMED – verify with Finder screenshot */
+ --pearder-sidebar-bg: rgba(195,195,205,.20); /* ASSUMED – verify with Finder screenshot */
+ --pearder-sidebar-blur: 20px; /* ASSUMED – verify with Finder screenshot */
+ --pearder-sidebar-padding-y: 13px; /* ASSUMED – verify with Finder screenshot */
+ --pearder-sidebar-padding-x: 8px; /* ASSUMED – verify with Finder screenshot */
+ --pearder-sidebar-row: 25px; /* ASSUMED – verify with Finder screenshot */
+ --pearder-sidebar-radius: 4px; /* ASSUMED – verify with Finder screenshot */
+ --pearder-sidebar-icon-gap: 10px; /* ASSUMED – verify with Finder screenshot */
+ --pearder-sidebar-symbol-size: 18px; /* ASSUMED – verify with Finder screenshot */
+ --pearder-sidebar-item-pad: 8px; /* ASSUMED – verify with Finder screenshot */
+ --pearder-heading-pad: 7px; /* ASSUMED – verify with Finder screenshot */
+ --pearder-group-gap: 12px; /* ASSUMED – verify with Finder screenshot */
+ --pearder-grid-cell: 94px; /* ASSUMED – verify with Finder screenshot */
+ --pearder-grid-gap: 10px; /* ASSUMED – verify with Finder screenshot */
+ --pearder-grid-padding: 14px; /* ASSUMED – verify with Finder screenshot */
+ --pearder-file-radius: 4px; /* ASSUMED – verify with Finder screenshot */
+ --pearder-file-pad: 5px; /* ASSUMED – verify with Finder screenshot */
+ --pearder-icon-size: 53px; /* ASSUMED – verify with Finder screenshot */
+ --pearder-icon-gap: 6px; /* ASSUMED – verify with Finder screenshot */
+ --pearder-name-col-min: 160px; /* ASSUMED – verify with Finder list screenshot */
+ --pearder-date-col-min: 115px; /* ASSUMED – verify with Finder list screenshot */
+ --pearder-size-col: 80px; /* ASSUMED – verify with Finder list screenshot */
+ --pearder-kind-col: 95px; /* ASSUMED – verify with Finder list screenshot */
+ --pearder-image-preview-max-height: 170px; /* ASSUMED – verify with Finder screenshot */
+ --pearder-list-min-width: 500px; /* ASSUMED – verify with Finder screenshot */
+ --pearder-list-row: 26px; /* ASSUMED – verify with Finder screenshot */
+ --pearder-list-icon: 18px; /* ASSUMED – verify with Finder screenshot */
+ --pearder-list-pad: 11px; /* ASSUMED – verify with Finder screenshot */
+ --pearder-list-gap: 8px; /* ASSUMED – verify with Finder screenshot */
+ --pearder-column-width: 211px; /* ASSUMED – verify with Finder screenshot */
+ --pearder-column-pad: 5px; /* ASSUMED – verify with Finder screenshot */
+ --pearder-column-preview-width: 235px; /* ASSUMED – verify with Finder screenshot */
+ --pearder-gallery-gap: 10px; /* ASSUMED – verify with Finder screenshot */
+ --pearder-gallery-strip-height: 91px; /* ASSUMED – verify with Finder screenshot */
+ --pearder-gallery-pad: 7px; /* ASSUMED – verify with Finder screenshot */
+ --pearder-gallery-thumb-width: 75px; /* ASSUMED – verify with Finder screenshot */
+ --pearder-gallery-thumb-icon: 45px; /* ASSUMED – verify with Finder screenshot */
+ --pearder-preview-pad: 25px; /* ASSUMED – verify with Finder screenshot */
+ --pearder-preview-icon: 95px; /* ASSUMED – verify with Finder screenshot */
+ --pearder-pathbar-height: 23px; /* ASSUMED – verify with Finder screenshot */
+ --pearder-pathbar-gap: 7px; /* ASSUMED – verify with Finder screenshot */
+ --pearder-status-height: 23px; /* ASSUMED – verify with Finder screenshot */
+ --pearder-status-pad: 12px; /* ASSUMED – verify with Finder screenshot */
+ --quicklook-width: 660px; /* ASSUMED – verify with Quick Look screenshot */
+ --quicklook-height: 475px; /* ASSUMED – verify with Quick Look screenshot */
+ --quicklook-header-height: 31px; /* ASSUMED – verify with Quick Look screenshot */
+ --quicklook-header-button-right: 12px; /* ASSUMED – verify with Quick Look screenshot */
+ --quicklook-content-pad: 22px; /* ASSUMED – verify with Quick Look screenshot */
+ --quicklook-footer-height: 37px; /* ASSUMED – verify with Quick Look screenshot */
+ --quicklook-footer-pad: 12px; /* ASSUMED – verify with Quick Look screenshot */
+ --quicklook-generic-icon: 120px; /* ASSUMED – verify with Quick Look screenshot */
+ --terminal-width: 690px; /* ASSUMED – verify with Terminal screenshot */
+ --terminal-height: 410px; /* ASSUMED – verify with Terminal screenshot */
+ --terminal-font-size: 13px; /* ASSUMED – verify with Terminal screenshot */
+ --terminal-line-height: 18px; /* ASSUMED – verify with Terminal screenshot */
+ --terminal-padding: 10px; /* ASSUMED – verify with Terminal screenshot */
+ --terminal-input-gap: 8px; /* ASSUMED – verify with Terminal screenshot */
+ --terminal-bg: #ffffff; /* ASSUMED – verify with Terminal screenshot */
+ --terminal-fg: #161616; /* ASSUMED – verify with Terminal screenshot */
+ --terminal-error: #bd3636; /* ASSUMED – verify with Terminal screenshot */
+ --terminal-command: #666666; /* ASSUMED – verify with Terminal screenshot */
+ --terminal-prompt: #444444; /* ASSUMED – verify with Terminal screenshot */
+}
+:root[data-theme="dark"] {
+ --pearder-sidebar-bg: rgba(40,40,45,.43);
+ --terminal-bg: #181818;
+ --terminal-fg: #e8e8e8;
+ --terminal-error: #ff817a;
+ --terminal-command: #b2b2b2;
+ --terminal-prompt: #9dceff;
+}
+
+/* Phase 5 Catalina shell values: ASSUMED – verify with screenshots of
+   Spotlight (with results), Launchpad, Notification Center, Mission Control,
+   Siri, Cmd+Tab, Dock and login screen. Nothing measured from the tiny desktop JPG. */
+:root {
+ --z-phase5: 5200; /* ASSUMED – verify with screenshot */
+ --z-spotlight: 5600; /* ASSUMED – verify with screenshot */
+ --z-notification: 5700; /* ASSUMED – verify with screenshot */
+ --z-banner: 5750; /* ASSUMED – verify with screenshot */
+ --z-hotcorners: 5800; /* ASSUMED – verify with screenshot */
+ --z-switcher: 5850; /* ASSUMED – verify with screenshot */
+ --z-session: 8900; /* ASSUMED – verify with screenshot */
+ --spotlight-top: 19vh; /* ASSUMED – verify with screenshot */
+ --spotlight-width: 680px; /* ASSUMED – verify with screenshot */
+ --spotlight-radius: 10px; /* ASSUMED – verify with screenshot */
+ --spotlight-bg: rgba(246,246,249,.94); /* ASSUMED – verify with screenshot */
+ --spotlight-blur: 28px; /* ASSUMED – verify with screenshot */
+ --spotlight-header-height: 62px; /* ASSUMED – verify with screenshot */
+ --spotlight-input-gap: 13px; /* ASSUMED – verify with screenshot */
+ --spotlight-pad: 19px; /* ASSUMED – verify with screenshot */
+ --spotlight-font: 21px; /* ASSUMED – verify with screenshot */
+ --spotlight-results-height: 386px; /* ASSUMED – verify with screenshot */
+ --spotlight-row-height: 46px; /* ASSUMED – verify with screenshot */
+ --spotlight-result-icon: 31px; /* ASSUMED – verify with screenshot */
+ --spotlight-preview-icon: 90px; /* ASSUMED – verify with screenshot */
+ --launchpad-blur: 28px; /* ASSUMED – verify with screenshot */
+ --launchpad-pad-top: 93px; /* ASSUMED – verify with screenshot */
+ --launchpad-pad-x: 55px; /* ASSUMED – verify with screenshot */
+ --launchpad-grid-width: 1030px; /* ASSUMED – verify with screenshot */
+ --launchpad-gap-x: 24px; /* ASSUMED – verify with screenshot */
+ --launchpad-gap-y: 23px; /* ASSUMED – verify with screenshot */
+ --launchpad-icon-size: 78px; /* ASSUMED – verify with screenshot */
+ --nc-width: 342px; /* ASSUMED – verify with screenshot */
+ --nc-background: rgba(233,235,240,.91); /* ASSUMED – verify with screenshot */
+ --nc-card-bg: rgba(255,255,255,.72); /* ASSUMED – verify with screenshot */
+ --nc-card-radius: 7px; /* ASSUMED – verify with screenshot */
+ --nc-blur: 38px; /* ASSUMED – verify with screenshot */
+ --nc-slide-time: 280ms; /* ASSUMED – verify with screenshot/video */
+ --nc-banner-right: 15px; /* ASSUMED – verify with screenshot */
+ --nc-banner-top: 12px; /* ASSUMED – verify with screenshot */
+ --siri-offset: 13px; /* ASSUMED – verify with screenshot */
+ --siri-width: 320px; /* ASSUMED – verify with screenshot */
+ --siri-radius: 9px; /* ASSUMED – verify with screenshot */
+ --siri-orb-size: 35px; /* ASSUMED – verify with screenshot */
+ --mission-blur: 26px; /* ASSUMED – verify with screenshot */
+ --mission-pad-top: 42px; /* ASSUMED – verify with screenshot */
+ --mission-pad-x: 20px; /* ASSUMED – verify with screenshot */
+ --mission-spaces-height: 103px; /* ASSUMED – verify with screenshot */
+ --mission-space-preview-width: 85px; /* ASSUMED – verify with screenshot */
+ --mission-space-preview-height: 51px; /* ASSUMED – verify with screenshot */
+ --mission-cards-top: 60px; /* ASSUMED – verify with screenshot */
+ --mission-card-width: 315px; /* ASSUMED – verify with screenshot */
+ --mission-card-height: 196px; /* ASSUMED – verify with screenshot */
+ --session-blur: 22px; /* ASSUMED – verify with screenshot */
+ --session-avatar-size: 96px; /* ASSUMED – verify with screenshot */
+ --switcher-radius: 12px; /* ASSUMED – verify with screenshot */
+ --switcher-icon: 64px; /* ASSUMED – verify with screenshot */
+ --hotcorner-size: 14px; /* ASSUMED – verify with screenshot */
+}
+:root[data-theme="dark"] {
+ --spotlight-bg:rgba(39,39,43,.95);
+ --nc-background:rgba(34,35,40,.93);
+ --nc-card-bg:rgba(65,66,72,.83);
+}
+
+:root { --nc-note-height: 74px; /* ASSUMED – verify with Today tab screenshot */ }
+
+/* v0.5.1 Catalina fidelity pass. All unmeasured values remain provisional. */
+:root {
+ --menu-font-size: 13px; /* ASSUMED – verify with native Catalina desktop */
+ --menu-gap: 15px; /* ASSUMED – verify with native Catalina menu */
+ --menu-padding-x: 14px; /* ASSUMED – verify with native Catalina menu */
+ --menu-background: rgba(242,242,245,.83); /* ASSUMED – verify with native Catalina light desktop */
+ --menu-popup-background: rgba(248,248,249,.96); /* ASSUMED – verify with native Catalina menu */
+ --dock-background: rgba(232,232,236,.54); /* ASSUMED – verify with Catalina light Dock */
+ --dock-border: rgba(255,255,255,.65); /* ASSUMED – verify with Catalina Dock */
+ --dock-fidelity-shadow: 0 13px 28px rgba(0,0,0,.30),inset 0 1px 0 rgba(255,255,255,.38); /* ASSUMED – verify with Dock screenshot */
+ --dock-icon-shadow: 0 3px 5px rgba(0,0,0,.19); /* ASSUMED – verify with magnified Dock */
+ --window-fidelity-border: rgba(40,40,45,.26); /* ASSUMED – verify with Finder light window */
+ --window-fidelity-toolbar: linear-gradient(to bottom,#f7f7f8,#e7e7e9); /* ASSUMED – verify with Finder light toolbar */
+ --window-fidelity-titlebar: linear-gradient(to bottom,#f7f7f8,#e7e7e9); /* ASSUMED – verify with Catalina window screenshot */
+ --sidebar-fidelity-surface: rgba(224,224,231,.70); /* ASSUMED – verify with Finder sidebar screenshot */
+ --sidebar-section-tracking: .038em; /* ASSUMED – verify with Finder sidebar headings */
+ --pearder-segment-selected: rgba(255,255,255,.93); /* ASSUMED – verify with Catalina Finder toolbar */
+ --pearder-segment-shadow: inset 0 1px 2px rgba(0,0,0,.10); /* ASSUMED – verify with Finder toolbar */
+ --catalina-menu-bottom-border: rgba(0,0,0,.20); /* ASSUMED – verify with reference screenshot */
+ --catalina-menu-divider: rgba(255,255,255,.58); /* ASSUMED – verify with reference screenshot */
+ --catalina-wallpaper-light: brightness(1.02) contrast(1.09) saturate(.90); /* ASSUMED – original artwork, not Apple wallpaper */
+ --catalina-wallpaper-night: brightness(.68) contrast(1.12) saturate(.84) hue-rotate(13deg); /* ASSUMED – original artwork */
+ --catalina-wallpaper-wash: linear-gradient(to bottom,rgba(227,191,201,.13),transparent 52%,rgba(20,29,44,.04)); /* ASSUMED – original artwork */
+ --catalina-wallpaper-night-wash: linear-gradient(to bottom,rgba(11,38,70,.17),rgba(16,44,80,.09) 55%,rgba(9,20,42,.17)); /* ASSUMED – original artwork */
+ --catalina-status-min-opacity: .92; /* ASSUMED – verify with Catalina screenshot */
+ --catalina-popup-selection-radius: 0px; /* ASSUMED – verify with Catalina menu screenshot */
+ --catalina-window-subtle-border: 1px; /* ASSUMED – verify with screenshot */
+ --catalina-sidebar-heading-size: 11px; /* ASSUMED – verify with Finder sidebar screenshot */
+ --catalina-pane-bg: #fff; /* ASSUMED – verify with Finder screenshot */
+ --nc-fidelity-background: rgba(240,240,243,.84); /* ASSUMED – verify with Catalina Notification Center */
+ --nc-fidelity-card-bg: rgba(255,255,255,.72); /* ASSUMED – verify with Catalina Notification Center */
+ --catalina-titlebar-highlight: rgba(255,255,255,.70); /* ASSUMED – verify with window screenshot */
+}
+:root[data-theme="dark"] {
+ --menu-background: rgba(27,29,34,.78); /* ASSUMED – verify with native Catalina dark desktop */
+ --menu-popup-background: rgba(43,43,45,.95); /* ASSUMED – verify with Catalina dark menu */
+ --dock-background: rgba(83,87,99,.46); /* ASSUMED – verify with Catalina dark Dock */
+ --dock-border: rgba(255,255,255,.26); /* ASSUMED – verify with Catalina dark Dock */
+ --dock-fidelity-shadow: 0 14px 32px rgba(0,0,0,.34),inset 0 1px 0 rgba(255,255,255,.14); /* ASSUMED – verify with dark Dock */
+ --dock-icon-shadow: 0 3px 6px rgba(0,0,0,.40); /* ASSUMED – verify with magnified Dock */
+ --window-fidelity-border: rgba(255,255,255,.18); /* ASSUMED – verify with dark Finder */
+ --window-fidelity-toolbar: linear-gradient(to bottom,#363638,#2c2c2f); /* ASSUMED – verify with Catalina dark Finder */
+ --window-fidelity-titlebar: linear-gradient(to bottom,#353537,#29292b); /* ASSUMED – verify with Catalina dark window */
+ --sidebar-fidelity-surface: rgba(49,49,53,.88); /* ASSUMED – verify with Catalina dark Finder */
+ --pearder-segment-selected: rgba(105,105,109,.52); /* ASSUMED – verify with dark Finder toolbar */
+ --pearder-segment-shadow: inset 0 1px 2px rgba(0,0,0,.48); /* ASSUMED – verify with dark Finder */
+ --catalina-menu-bottom-border: rgba(255,255,255,.14); /* ASSUMED – verify with native Catalina screenshot */
+ --catalina-menu-divider: rgba(255,255,255,.07); /* ASSUMED – verify with native screenshot */
+ --nc-fidelity-background: rgba(35,35,39,.84); /* ASSUMED – verify with Catalina dark Notification Center */
+ --nc-fidelity-card-bg: rgba(71,71,77,.56); /* ASSUMED – verify with Catalina dark Notification Center */
+ --catalina-titlebar-highlight: rgba(255,255,255,.06); /* ASSUMED – verify with dark window screenshot */
+ --catalina-pane-bg: #1e1e1e; /* ASSUMED – verify with dark Finder screenshot */
+}
+:root {
+ --wallpaper-custom-fit: cover; /* ASSUMED – original/user-selected wallpaper fill */
+ --wallpaper-custom-position: center center; /* ASSUMED – original/user-selected wallpaper positioning */
+ --wallpaper-button-border: rgba(120,120,125,.32); /* ASSUMED – verify with Catalina preference screenshot */
+}
+
+/* Catalina Accuracy Pass A — desktop screenshots from user, October 2026.
+   Screenshot 1536x960: ~22px menu bar, ~62px Dock shelf, ~50px icons.
+   'ESTIMATED' because image scaling / DPR is unknown. */
+:root {
+ --ca-menu-horizontal-padding: 9px; /* ESTIMATED – Finder top menu */
+ --ca-menu-brand-width: 28px; /* ESTIMATED – Finder top menu */
+ --ca-menu-menuitem-font: 13px; /* ESTIMATED – system menu */
+ --ca-menu-open-color: rgba(40,44,52,.20); /* ASSUMED – menu activated */
+ --ca-menu-left-tight: 3px; /* ESTIMATED – Catalina menu items */
+ --ca-menu-status-space: 8px; /* ESTIMATED – menu status glyphs */
+ --ca-menu-border: rgba(0,0,0,.24); /* ESTIMATED – menu bar bottom stroke */
+ --ca-popup-row-pad-left: 22px; /* ESTIMATED – Finder Go menu */
+ --ca-popup-row-pad-right: 17px; /* ESTIMATED – Finder Go menu */
+ --ca-popup-separator-margin: 5px; /* ESTIMATED – Finder Go menu */
+ --ca-dock-padding-bottom: 3px; /* ESTIMATED – Catalina 1536x960 Dock */
+ --ca-dock-indicator-offset: -2px; /* ESTIMATED – running indicators */
+ --ca-dock-highlight: inset 0 1px rgba(255,255,255,.36); /* ESTIMATED – Dock glass */
+ --ca-dock-shelf-shadow: 0 4px 17px rgba(0,0,0,.30); /* ESTIMATED – Dock shadow */
+ --ca-dock-background-light: rgba(232,233,235,.56); /* ESTIMATED – Dock shelf */
+ --ca-dock-background-dark: rgba(130,137,150,.29); /* ESTIMATED – Dock dark shelf */
+ --ca-icon-shadow: drop-shadow(0 2px 2px rgba(0,0,0,.28)); /* ESTIMATED – Catalina Dock icon */
+ --ca-desktop-label-size: 12px; /* ESTIMATED – desktop label */
+ --ca-status-popover-radius: 5px; /* ESTIMATED – Catalina menu status popovers */
+}
+:root[data-theme='dark'] {
+ --ca-menu-open-color: rgba(255,255,255,.19);
+ --ca-menu-border: rgba(255,255,255,.11);
+}

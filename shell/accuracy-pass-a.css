@@ -1,0 +1,48 @@
+/* Catalina 10.15 Accuracy Pass A.
+   Desktop/menu/Dock only. MacOS icon silhouettes are never squircle-masked. */
+.menu-bar {
+ border-bottom:1px solid var(--ca-menu-border);
+ box-shadow:none;
+ font-size:var(--ca-menu-menuitem-font);
+}
+.menu-left{gap:0}
+.shell-menu-items{height:100%;display:flex;align-items:center;gap:0}
+.menu-left .menu-logo {width:var(--ca-menu-brand-width);margin-right:var(--ca-menu-left-tight)}
+.menu-left .menu-item{padding-left:var(--ca-menu-horizontal-padding);padding-right:var(--ca-menu-horizontal-padding);font-size:var(--ca-menu-menuitem-font)}
+.menu-left .menu-item.app-title{font-weight:600;padding-left:var(--ca-menu-horizontal-padding);padding-right:var(--ca-menu-horizontal-padding)}
+.menu-item.is-open::before,.menu-logo.is-open::before{inset:0;background:var(--ca-menu-open-color);border-radius:0}
+.menu-right{gap:var(--ca-menu-status-space)}
+.status-button{min-width:17px}
+.status-button:hover{background:var(--ca-menu-open-color)}
+.status-button.menu-time:hover{background:transparent}
+.menu-popup{border-radius:var(--menu-popup-radius);background:var(--menu-popup-background);padding:var(--menu-popup-padding);box-shadow:var(--menu-popup-shadow)}
+.menu-popup .popup-item{padding-left:var(--ca-popup-row-pad-left);padding-right:var(--ca-popup-row-pad-right);border-radius:0}
+.menu-popup .popup-item:hover:not(:disabled),.menu-popup .popup-item.keyboard-selected{border-radius:0}
+.popup-separator{margin-top:var(--ca-popup-separator-margin);margin-bottom:var(--ca-popup-separator-margin)}
+.status-popover{border-radius:var(--ca-status-popover-radius)}
+#dock {
+ min-height:calc(var(--dock-size-live,var(--dock-icon-size)) + 11px);
+ padding-bottom:var(--ca-dock-padding-bottom);
+ background:var(--ca-dock-background-light);
+ box-shadow:var(--ca-dock-shelf-shadow),var(--ca-dock-highlight);
+ backdrop-filter:blur(var(--dock-blur)) saturate(120%);
+ -webkit-backdrop-filter:blur(var(--dock-blur)) saturate(120%);
+}
+:root[data-theme='dark'] #dock{background:var(--ca-dock-background-dark)}
+#dock .dock-icon{filter:var(--ca-icon-shadow)}
+#dock .dock-indicator{bottom:var(--ca-dock-indicator-offset)}
+#desktop-icons{gap:var(--desktop-icon-gap,8px)}
+.desktop-icon span{font-size:var(--ca-desktop-label-size);line-height:1.15;font-weight:500}
+.desktop-icon img{filter:var(--ca-icon-shadow)}
+/* Keep the shelf width dynamic while JS enlarges each flex basis. */
+#dock .dock-item{max-width:none}
+@media(max-width:800px){
+ .menu-left .menu-item{padding-left:5px;padding-right:5px}
+ .menu-left{gap:0}
+ .menu-right{gap:3px}
+ .menu-left .menu-item:nth-child(n+5){display:none}
+}
+
+/* Focus stays keyboard-accessible without a conspicuous web-button outline. */
+#menu-bar button:focus-visible{outline:none}
+#menu-bar button[data-menu]:focus-visible:not(.is-open){box-shadow:inset 0 -2px var(--accent)}

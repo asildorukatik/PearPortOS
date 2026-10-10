@@ -1,0 +1,44 @@
+/* PearPortOS Catalina 10.15 fidelity layer: appearance only; service code untouched.
+   Every adjustable visual constant is declared as a token in core/tokens.css. */
+.wallpaper{background-image:var(--catalina-wallpaper-wash),url('../assets/wallpapers/Pear-Island.svg');filter:var(--catalina-wallpaper-light);background-position:center center}
+:root[data-theme="dark"] .wallpaper,:root[data-dynamic="on"][data-theme="dark"] .wallpaper{background-image:var(--catalina-wallpaper-night-wash),url('../assets/wallpapers/Pear-Island.svg');filter:var(--catalina-wallpaper-night)}
+.menu-bar{background:var(--menu-background);border-bottom:1px solid var(--catalina-menu-bottom-border);box-shadow:inset 0 1px var(--catalina-menu-divider);font-weight:400;-webkit-font-smoothing:antialiased}
+.menu-logo{flex-shrink:0}
+.menu-left .menu-item.app-title{font-weight:600}
+.menu-item.is-open::before,.menu-logo.is-open::before{background:rgba(120,120,125,.34)}
+.status-button svg{opacity:var(--catalina-status-min-opacity)}
+.menu-popup{border-color:var(--menu-border);box-shadow:var(--menu-popup-shadow);background:var(--menu-popup-background)}
+.popup-item:hover:not(:disabled),.popup-item.keyboard-selected{border-radius:var(--catalina-popup-selection-radius)}
+#dock{background:var(--dock-background);border-color:var(--dock-border);box-shadow:var(--dock-fidelity-shadow);-webkit-font-smoothing:antialiased}
+#dock .dock-icon{filter:drop-shadow(var(--dock-icon-shadow));image-rendering:auto}
+.pp-window{box-shadow:var(--window-shadow);border-color:var(--window-fidelity-border)}
+.pp-window:not(.has-pear-toolbar) .window-titlebar{background:var(--window-fidelity-titlebar);box-shadow:inset 0 1px var(--catalina-titlebar-highlight)}
+.pp-window.has-pear-toolbar .pear-toolbar{background:var(--window-fidelity-toolbar);box-shadow:inset 0 1px var(--catalina-titlebar-highlight)}
+.pp-window .traffic-btn{box-shadow:inset 0 1px rgba(255,255,255,.25)}
+.pp-window.inactive .traffic-btn{box-shadow:none}
+.pear-sidebar{background:var(--sidebar-fidelity-surface);border-right:var(--catalina-window-subtle-border) solid var(--separator)}
+.pear-sidebar-heading{font-size:var(--catalina-sidebar-heading-size);text-transform:uppercase;letter-spacing:var(--sidebar-section-tracking)}
+.pear-content{background:var(--catalina-pane-bg)}
+.pear-view-switch{background:rgba(127,127,127,.08);box-shadow:0 1px var(--catalina-titlebar-highlight)}
+.pear-view-switch button.active{color:var(--text-primary);background:var(--pearder-segment-selected);box-shadow:var(--pearder-segment-shadow)}
+.pear-view-switch button:hover{background:var(--pearder-segment-selected)}
+.pear-file-icon img,.pear-file-name img{filter:drop-shadow(var(--dock-icon-shadow))}
+.pear-toolbar .pear-search{background:var(--ui-field-background);box-shadow:inset 0 1px 2px rgba(0,0,0,.08)}
+.pear-sidebar-item:not(.active):hover{background:rgba(127,127,127,.17)}
+.pp-window:has(.preferences-root) .prefs-toolbar{background:var(--window-fidelity-toolbar);box-shadow:inset 0 1px var(--catalina-titlebar-highlight)}
+#notification-center{background:var(--nc-fidelity-background)}
+.nc-message,.nc-widget{background:var(--nc-fidelity-card-bg)}
+#spotlight-panel .spotlight-main{box-shadow:var(--window-shadow)}
+:root[data-wallpaper-custom="on"] .wallpaper,
+:root[data-wallpaper-custom="on"][data-theme="dark"] .wallpaper,
+:root[data-wallpaper-custom="on"][data-dynamic="on"] .wallpaper {
+ background-image:var(--custom-wallpaper-url);
+ background-size:var(--wallpaper-custom-fit);
+ background-position:var(--wallpaper-custom-position);
+ filter:none;
+}
+.prefs-wallpaper-actions{display:flex;flex-wrap:wrap;align-items:center;gap:var(--ui-control-gap)}
+.prefs-wallpaper-import{display:inline-flex;align-items:center;border:1px solid var(--wallpaper-button-border);background:linear-gradient(var(--ui-button-top),var(--ui-button-bottom));border-radius:var(--ui-button-radius);height:var(--ui-button-height);padding:0 var(--ui-control-gap);cursor:pointer;position:relative;overflow:hidden}
+.prefs-wallpaper-import input{position:absolute;width:100%;height:100%;inset:0;opacity:0;cursor:pointer}
+.prefs-wallpaper-actions button{border:1px solid var(--wallpaper-button-border);background:linear-gradient(var(--ui-button-top),var(--ui-button-bottom));border-radius:var(--ui-button-radius);height:var(--ui-button-height);padding:0 var(--ui-control-gap)}
+:root[data-wallpaper-custom="on"] .prefs-wallpaper-preview{background-image:var(--custom-wallpaper-url, url('../assets/wallpapers/Pear-Island.svg'));}
