@@ -45,6 +45,7 @@
      row('Progress:',U().progress(65))+
      row('Stepper:',U().stepper('demo-stepper',r('demo-stepper',5)))+
      row('Sheet:',btn('Show alert sheet…',{action:'demo-sheet'}))+
+     row('Alerts:',`<div class="pp-inline">${btn('Show Catalina alert…',{action:'catalina-alert'})}${btn('Request authentication…',{action:'catalina-auth'})}</div>`)+
      U().disclosure('Additional standard components',U().table(['Control','Availability'],[['Text field','Yes'],['Search field','Yes'],['Checkbox / radio','Yes'],['Segmented / popup','Yes'],['Slider / stepper','Yes'],['Sheet / progress','Yes'],['Tabs / table / disclosure','Yes']])));
     case 'desktop':return show('Desktop & Screen Saver','Catalina island wallpapers supplied by you. Select Day, Dusk, Night, or Dynamic Desktop.',
      U().tabs('desktop-tab',[['desktop','Desktop'],['saver','Screen Saver']],r('desktop-tab','desktop'))+
@@ -70,8 +71,8 @@
     case 'accounts':return this.unavailable('Internet Accounts','Web pages cannot add your computer’s native email or cloud accounts. No credentials are requested or stored.');
     case 'users':return this.unavailable('Users & Groups','This web-based desktop uses a demonstration session, not operating-system users.');
     case 'accessibility':return show('Accessibility','Local settings for this simulated desktop.',cb('reduce-motion','Reduce motion',r('reduce-motion',false))+separator()+cb('reduce-transparency','Reduce transparency',r('reduce-transparency',false)));
-    case 'security':return this.unavailable('Security & Privacy','The browser sandbox cannot modify firewall, disk encryption, app permissions or system privacy controls.');
-    case 'update':return this.unavailable('Software Update','PearPortOS is an offline development build. Automatic OS update checks are not available.');
+    case 'security':return show('Security & Privacy','Native security controls are not available in the browser. Try the Catalina-style authentication preview below.',row('Authorization:',btn('Preview Authentication…',{action:'catalina-auth'})));
+    case 'update':return show('Software Update','The web edition cannot install operating system updates.',row('Preview:',btn('Show Authentication Dialog…',{action:'catalina-auth'})));
     case 'network':return this.unavailable('Network','Wi-Fi and Ethernet status require native Linux services. This browser app cannot configure your real network.');
     case 'bluetooth':return this.unavailable('Bluetooth','Bluetooth pairing and system-wide device settings are unavailable from this browser desktop.');
     case 'sound':return show('Sound','Preview of PearPortOS interface sound controls. This does not change system audio.',row('Output volume:',slider('mock-volume',r('mock-volume',52))+` <output data-out="mock-volume">${r('mock-volume',52)}%</output>`)+row('Alert:',pop('mock-alert',opt('Pear Chime','Quiet Pop','None'),r('mock-alert','Pear Chime'))));
@@ -95,6 +96,8 @@
    if(btn.dataset.accent){P.theme.setAccent(btn.dataset.accent);this.navigate(state,'general',false);return}
    if(btn.dataset.setting&&btn.dataset.value!==undefined){this.apply(btn.dataset.setting,btn.dataset.value,state);this.navigate(state,state.pane,false);return}
    if(btn.dataset.action==='dismiss-sheet'){btn.closest('.pp-sheet-mask')?.remove();return}
+   if(btn.dataset.action==='catalina-alert'){P.dialogs?.confirm({title:'Are you sure?',message:'This Catalina-style warning is a visual example. No changes will be made.',ok:'OK',cancel:'Cancel'});return}
+   if(btn.dataset.action==='catalina-auth'){P.dialogs?.authorize({app:'System Preferences',reason:'No actual settings are changed.'});return}
    if(btn.dataset.action==='demo-sheet'){state.root.insertAdjacentHTML('beforeend',U().sheet('PearPortOS','This is a Catalina-style window sheet. All visual values remain provisional until the iMac screenshots arrive.'));return}
    if(btn.dataset.action==='show-siri'){P.siri.open();return}
    if(btn.dataset.action==='show-spotlight'){P.spotlight.open();return}
