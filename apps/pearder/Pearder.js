@@ -90,11 +90,11 @@
    if(action==='paste'){if(!this.clipboard)return P.toast('Clipboard is empty');for(const src of this.clipboard.nodes){const n=P.fs.get(src);if(n){if(this.clipboard.cut)P.fs.move(src,s.path);else P.fs.copy(src,s.path)}}if(this.clipboard.cut)this.clipboard=null;return}
    if(action==='trash'){for(const id of s.selected){const n=P.fs.nodes.get(id);if(n)P.fs.trash(P.fs.pathOf(n))}s.selected=[];return}
    if(action==='restore'){for(const id of s.selected){const n=P.fs.nodes.get(id);if(n)P.fs.restore(P.fs.pathOf(n))}s.selected=[];return}
-   if(action==='delete'){if(!confirm('Permanently delete the selected items from PearPortOS?'))return;for(const id of s.selected){const n=P.fs.nodes.get(id);if(n)P.fs.remove(P.fs.pathOf(n))}s.selected=[];return}
-   if(action==='emptytrash'){if(confirm('Permanently empty the virtual Trash?'))P.fs.emptyTrash();return}
+   if(action==='delete'){const ids=[...s.selected];P.dialogs.confirm({title:'Delete selected items?',message:'These items will be permanently removed from your PearPortOS virtual disk.',ok:'Delete',cancel:'Cancel'}).then(approved=>{if(!approved)return;for(const id of ids){const n=P.fs.nodes.get(id);if(n)P.fs.remove(P.fs.pathOf(n))}s.selected=[];this.render(s)});return}
+   if(action==='emptytrash'){P.dialogs.confirm({title:'Empty the Trash?',message:'Items in the PearPortOS virtual Trash will be permanently deleted.',ok:'Empty Trash',cancel:'Cancel'}).then(approved=>{if(approved)P.fs.emptyTrash()});return}
    if(action==='open'){const n=P.fs.nodes.get(s.selected[0]);if(n)this.openNode(n,s);return}
    if(action==='quicklook'){const n=P.fs.nodes.get(s.selected[0]);if(n)this.quicklook.show(P.fs.pathOf(n));return}
-   if(action==='getinfo'){const n=P.fs.nodes.get(s.selected[0]);if(n)alert(`Name: ${n.name}\nKind: ${n.type}\nSize: ${human(P.fs.size(n))}\nPath: ${P.fs.pathOf(n)}`);return}
+   if(action==='getinfo'){const n=P.fs.nodes.get(s.selected[0]);if(n)P.dialogs.alert({title:n.name,message:`Kind: ${n.type}\nSize: ${human(P.fs.size(n))}\nPath: ${P.fs.pathOf(n)}`,symbol:'info'});return}
   }catch(err){P.toast(err.message||'File action failed')}
   }
   menu(x,y,s){P.menu.dismiss();const selected=s.selected.length>0;const trash=s.path==='/Trash';const actions=[['newfolder','New Folder'],['newfile','New Text Document'],['import','Import Files…'],['sep',''],...(selected?[['open','Open'],['quicklook','Quick Look   Space'],['rename','Rename'],['getinfo','Get Info'],['copy','Copy'],['cut','Move'],['tags','Add/Remove Tag'],[trash?'restore':'trash',trash?'Put Back':'Move to Trash']]:[]),['paste','Paste'],...(trash?[['emptytrash','Empty Trash']]:[])];
