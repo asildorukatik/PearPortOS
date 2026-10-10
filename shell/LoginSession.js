@@ -57,7 +57,7 @@
     }
    },true);
   }
-  start(){this.account=readAccount();this.mode=this.account?'chooser':'setup-welcome';this.show();}
+  start(){this.account=readAccount();this.selected=this.account;this.mode=this.account?'password':'setup-welcome';this.show();}
   show(){this.visible=true;this.el.classList.remove('login-dismiss');this.el.classList.add('shown');P.$('#screen').classList.add('session-locked');this.render();}
   hide(){this.visible=false;this.el.classList.add('login-dismiss');setTimeout(()=>{if(!this.visible){this.el.classList.remove('shown','login-dismiss');P.$('#screen').classList.remove('session-locked');}},380);}
   lock(mode='locked'){
@@ -68,9 +68,11 @@
    this.selected=this.account;
    this.show();
   }
-  logout(){this.invalidateVerify();this.current=null;this.selected=null;this.mode=this.account?'chooser':'setup-welcome';this.show();}
-  back(){this.invalidateVerify();if(this.mode==='password'){this.mode='chooser';this.selected=null;this.render();}else if(this.mode==='sleep')this.wake();}
+  logout(){this.invalidateVerify();this.current=null;this.selected=this.account;this.mode=this.account?'password':'setup-welcome';this.show();}
+  back(){this.invalidateVerify();if(this.mode==='password'&&this.accountCount()>1){this.mode='chooser';this.selected=null;this.render();}else if(this.mode==='sleep')this.wake();}
+  accountCount(){return this.account?1:0;}
   select(){if(!this.account)return;this.selected=this.account;this.mode='password';this.render();this.el.querySelector('.login-password')?.focus({preventScroll:true});}
+  async checkPassword(text){if(!this.account||!text)return false;return (await passwordVerifier(text,this.account.salt))===this.account.verifier;}
   invalidateVerify(){this.verifyVersion++;clearTimeout(this.verifyTimer);this.verifyTimer=null;}
   async verify(input){
    if(this.busy||this.mode!=='password'||!this.account)return;
@@ -80,9 +82,9 @@
    const version=this.verifyVersion;
    this.verifyTimer=setTimeout(async()=>{
     try {
-     const value=await passwordVerifier(text,this.account.salt);
+     const matches=await this.checkPassword(text);
      if(version!==this.verifyVersion||this.mode!=='password'||input.value!==text)return;
-     if(value===this.account.verifier){input.disabled=true;this.unlock();return;}
+     if(matches){input.disabled=true;this.unlock();return;}
      // Do not reject partial passwords while the user is still typing.
      setTimeout(()=>{
       if(version!==this.verifyVersion||this.mode!=='password'||input.value!==text)return;
@@ -108,7 +110,7 @@
   power(action){
    this.invalidateVerify();
    if(action==='sleep'||action==='shutdown'){this.mode=action;this.show();}
-   else if(action==='restart'){this.current=null;this.selected=null;this.mode=this.account?'chooser':'setup-welcome';this.show();}
+   else if(action==='restart'){this.current=null;this.selected=this.account;this.mode=this.account?'password':'setup-welcome';this.show();}
   }
   updateClock(){
    const clock=this.el.querySelector('.login-clock');if(!clock)return;
@@ -171,15 +173,17 @@
    const chooser=m==='chooser',password=m==='password';
    let center='';
    if(chooser){center=`<div class="login-users" aria-label="Select a user"><button type="button" class="login-user" data-user="primary"><span class="login-user-avatar">${avatar()}</span><span class="login-user-name">${P.escape(this.account?.name||'User')}</span></button></div>`;}
-   else if(password){center=`<div class="login-auth"><button class="login-back" data-back title="Back to accounts" aria-label="Back to accounts">‹ <span>All Users</span></button><div class="login-active-avatar">${avatar()}</div><h1>${P.escape(this.account?.name||'User')}</h1><div class="login-password-wrap"><input class="login-password" type="password" aria-label="Password" placeholder="Enter Password" autocapitalize="off" autocomplete="off" spellcheck="false" maxlength="128"><span class="login-field-arrow" aria-hidden="true">➜</span></div><p class="login-feedback" aria-live="polite"></p></div>`;}
+   else if(password){center=`<div class="login-auth">${this.accountCount()>1?'<button class="login-back" data-back title="Back to accounts" aria-label="Back to accounts">‹ <span>All Users</span></button>':''}<div class="login-active-avatar">${avatar()}</div><h1>${P.escape(this.account?.name||'User')}</h1><div class="login-password-row"><div class="login-password-wrap"><input class="login-password" type="password" aria-label="Password" placeholder="Enter Password" autocapitalize="off" autocomplete="off" spellcheck="false" maxlength="128"><span class="login-field-arrow" aria-hidden="true">➜</span></div><button type="button" class="login-password-help" data-help aria-label="Password help" title="Password help">?</button></div><p class="login-feedback" aria-live="polite"></p></div>`;}
    else if(m==='sleep'){center=`<div class="login-power-state"><div class="login-power-symbol">${powerIcon('sleep')}</div><h1>Sleeping</h1><button data-wake>Click or press a key to wake</button></div>`;}
    else if(m==='shutdown'){center=`<div class="login-power-state"><div class="login-power-symbol">${powerIcon('shutdown')}</div><h1>PearPortOS is shut down</h1><p>The web preview is paused.</p><button data-power="restart">Start PearPortOS</button></div>`;}
    this.el.innerHTML=`<div class="login-backdrop" aria-hidden="true"></div><div class="login-tint" aria-hidden="true"></div><div class="login-top"><span class="login-date"></span><span class="login-clock"></span></div><main class="login-center">${center}</main><div class="login-power-actions">${['sleep','restart','shutdown'].map(p=>`<button type="button" class="login-power" data-power="${p}"><span>${powerIcon(p)}</span><small>${p==='shutdown'?'Shut Down':p==='restart'?'Restart':'Sleep'}</small></button>`).join('')}</div><div class="login-disclaimer">Web-only account · Not a device security lock</div>`;
    this.updateClock();
    this.el.querySelector('[data-user]')?.addEventListener('click',()=>this.select());
    this.el.querySelector('[data-back]')?.addEventListener('click',()=>this.back());
+   this.el.querySelector('[data-help]')?.addEventListener('click',()=>P.dialogs?.alert({title:'Password Help',message:'This is a browser-local PearPortOS account. Password recovery and FileVault recovery keys are not supported. Your actual device password is not involved.',symbol:'info'}));
    const input=this.el.querySelector('.login-password');
    input?.addEventListener('input',()=>this.verify(input));
+   if(input){requestAnimationFrame(()=>{if(this.visible&&this.mode==='password')input.focus({preventScroll:true});});}
    input?.addEventListener('keydown',event=>{if(event.key==='Enter'){event.preventDefault();event.stopPropagation();}else if(event.key==='Escape'){event.preventDefault();this.back();}});
    this.el.querySelectorAll('[data-power]').forEach(b=>b.addEventListener('click',()=>this.power(b.dataset.power)));
    this.el.querySelector('[data-wake]')?.addEventListener('click',()=>this.wake());
