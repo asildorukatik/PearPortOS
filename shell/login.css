@@ -50,3 +50,27 @@
 @media(max-width:600px){.pear-login .login-center{top:42%}.pear-login .login-users{gap:10px}.pear-login .login-user{width:100px}.pear-login .login-user-avatar{width:70px;height:70px}.pear-login .login-user-name{font-size:12px}.pear-login .login-power-actions{gap:16px}.pear-login .login-top{right:13px}}
 @media(max-height:490px){.pear-login .login-center{top:41%}.pear-login .login-user-avatar{height:65px;width:65px}.pear-login .login-active-avatar{height:63px;width:63px}.pear-login .login-power-actions{bottom:29px}.pear-login .login-disclaimer{bottom:5px}.pear-login .login-instruction{margin-top:12px}.pear-login .login-back{top:-30px}}
 @media(prefers-reduced-motion:reduce){.pear-login,.pear-login *, .pear-login *::before,.pear-login *::after{animation:none!important;transition:none!important}}
+
+/* v0.5.6 first-boot setup: Catalina-inspired four-page white card. */
+.pear-login[data-scene^="setup-"]{background:#e4e4e4;color:#131313;text-align:center}
+.pear-login .setup-screen{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:14px;background:#e4e4e4;cursor:pointer}
+.pear-login .setup-card{position:relative;display:flex;flex-direction:column;align-items:center;width:min(446px,calc(100vw - 32px));height:min(388px,calc(100vh - 36px));min-height:300px;justify-content:center;background:#fff;border:1px solid #d0d0d0;border-radius:8px;box-shadow:0 14px 15px #0004,0 2px 6px #0001;color:#080808;cursor:default;animation:setup-pop .28s ease-out both}
+.pear-login .setup-card:focus{outline:none}
+.pear-login .setup-logo{height:157px;width:127px;border-radius:50%;padding:7px;background:linear-gradient(#fbfbff,#d8d9e2);box-shadow:0 2px 3px #0005,0 0 0 1px #acafbb,inset 0 1px #fff;overflow:hidden;margin-bottom:14px}
+.pear-login .setup-logo img{height:100%;width:100%;object-fit:cover;object-position:50% 50%;border-radius:50%;}
+.pear-login .setup-brand{margin:0 0 48px;font-size:31px;font-weight:400;letter-spacing:-.035em;white-space:nowrap;color:#050505}
+.pear-login .setup-brand strong,.pear-login .setup-small-brand strong{font-weight:730}
+.pear-login .setup-small-brand{position:absolute;top:19px;left:18px;font-size:17px;letter-spacing:-.035em;color:#111;white-space:nowrap}
+.pear-login .setup-form{width:100%;padding:0 30px;margin-top:-7px;display:flex;flex-direction:column;align-items:center}
+.pear-login .setup-form h2{font-size:22px;line-height:1.2;font-weight:680;letter-spacing:-.025em;margin:0 0 18px;color:#0a0a0a}
+.pear-login .setup-entry{display:block;width:min(336px,100%);height:83px;border:0;border-radius:17px;background:#e5e5e5;color:#181818;text-align:center;font-size:21px;letter-spacing:-.025em;font-family:inherit;outline:none;padding:0 18px;cursor:text;box-shadow:inset 0 0 0 1px transparent}
+.pear-login .setup-entry::placeholder{color:#9a9a9a}
+.pear-login .setup-entry:focus{box-shadow:inset 0 0 0 2px #0a84ff99}
+.pear-login .setup-hint{font-size:12px;color:#777;margin-top:11px;min-height:16px}
+.pear-login .setup-footer{position:absolute;bottom:17px;left:12px;right:12px;text-align:center;font-size:14px;font-weight:400;color:#252525;cursor:pointer}
+.pear-login .setup-footer-hidden{visibility:hidden;pointer-events:none}
+.pear-login .setup-error{position:absolute;bottom:53px;left:18px;right:18px;text-align:center;font-size:12px;color:#b32d2d;pointer-events:none}
+.pear-login .setup-card:has(.setup-form) .setup-error{bottom:52px}
+@keyframes setup-pop{from{opacity:0;transform:translateY(9px) scale(.985)}to{opacity:1;transform:none}}
+@media(max-width:490px){.pear-login .setup-card{height:min(380px,calc(100vh - 30px))}.pear-login .setup-brand{font-size:25px}.pear-login .setup-form h2{font-size:19px}.pear-login .setup-entry{height:67px;font-size:18px}.pear-login .setup-logo{height:140px;width:116px}}
+@media(prefers-reduced-motion:reduce){.pear-login .setup-card{animation:none}}
