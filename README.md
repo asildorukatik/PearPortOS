@@ -1,3 +1,7 @@
+## v0.5.7 — Catalina login and dialogs
+
+Single saved account opens directly to the password field on startup, lock, logout and restart. The same selected desktop wallpaper is used across account-selection and password screens. Login includes a Catalina-inspired password field and help control, and the proportional setup logo is fixed. Catalina-style alerts and browser-local authentication previews are available from System Preferences. No native credentials or permissions are involved.
+
 **PearPortOS v0.5.6:** First-run account creation (username and 5+ character password), single browser-local user, and no login-success banner. See [FIRST_RUN.md](FIRST_RUN.md).
 
 # PearPortOS 🍐
