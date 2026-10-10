@@ -1,3 +1,5 @@
+**PearPortOS v0.5.6:** First-run account creation (username and 5+ character password), single browser-local user, and no login-success banner. See [FIRST_RUN.md](FIRST_RUN.md).
+
 # PearPortOS 🍐
 
 PearPortOS is a **web-based macOS Catalina-inspired desktop prototype**. This repository hosts v0.5.5 (desktop, apps, Dock, widgets, Calendar, and visual demo login). It is **not** a Linux desktop environment or a secure login system.
